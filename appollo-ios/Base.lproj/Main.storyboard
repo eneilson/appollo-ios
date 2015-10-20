@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Scanner View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="appollo_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ScannerViewController" customModule="appollo_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -27,32 +27,81 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38x-ke-IGT">
-                                <rect key="frame" x="277" y="108" width="46" height="30"/>
+                                <rect key="frame" x="238" y="108" width="124" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Escanear Etiqueta"/>
                                 <connections>
-                                    <action selector="btnpushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RS6-rJ-Gao"/>
+                                    <action selector="beginScanPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y9G-6P-bMV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Produto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpU-pG-zoi">
+                                <rect key="frame" x="20" y="248" width="560" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="3xd-pO-zFR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xq6-Wr-obs">
+                                <rect key="frame" x="20" y="319" width="560" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="W4f-fp-k8y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Sy-Bf-gLU">
+                                <rect key="frame" x="180" y="400" width="240" height="150"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Ace-me-oRM"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="YKY-KG-tbu">
+                                <rect key="frame" x="210" y="113" width="20" height="20"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="IaE-Tz-K4W"/>
+                                    <constraint firstAttribute="height" constant="20" id="hxK-S3-6jm"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="38x-ke-IGT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1w0-ga-J7c"/>
+                            <constraint firstItem="38x-ke-IGT" firstAttribute="leading" secondItem="YKY-KG-tbu" secondAttribute="trailing" constant="8" id="3hp-lT-ULM"/>
+                            <constraint firstItem="6Sy-Bf-gLU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="160" id="QIZ-RQ-ctD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="foh-zF-bqF" secondAttribute="trailing" constant="30" id="QVx-fa-fui"/>
                             <constraint firstItem="foh-zF-bqF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="S3H-qp-4Qc"/>
                             <constraint firstItem="38x-ke-IGT" firstAttribute="top" secondItem="foh-zF-bqF" secondAttribute="bottom" constant="43" id="Yy3-VT-xpv"/>
+                            <constraint firstItem="xq6-Wr-obs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bzG-0K-d04"/>
+                            <constraint firstItem="XpU-pG-zoi" firstAttribute="top" secondItem="38x-ke-IGT" secondAttribute="bottom" constant="110" id="dQ3-Fl-Ptw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xq6-Wr-obs" secondAttribute="trailing" id="fm7-Vl-3zy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XpU-pG-zoi" secondAttribute="trailing" id="gQ6-bk-lrx"/>
+                            <constraint firstItem="YKY-KG-tbu" firstAttribute="top" secondItem="foh-zF-bqF" secondAttribute="bottom" constant="48" id="gR8-nb-Kbg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Sy-Bf-gLU" secondAttribute="trailing" constant="160" id="gam-qC-YN0"/>
+                            <constraint firstItem="6Sy-Bf-gLU" firstAttribute="top" secondItem="xq6-Wr-obs" secondAttribute="bottom" constant="60" id="lfU-XA-55O"/>
                             <constraint firstItem="foh-zF-bqF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="lpc-Aq-Nfb"/>
                             <constraint firstItem="38x-ke-IGT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pJa-Hc-Qdg"/>
+                            <constraint firstItem="xq6-Wr-obs" firstAttribute="top" secondItem="XpU-pG-zoi" secondAttribute="bottom" constant="50" id="pZa-Cg-pTX"/>
+                            <constraint firstItem="XpU-pG-zoi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vez-y1-7os"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btn" destination="38x-ke-IGT" id="nLK-X9-c1T"/>
-                        <outlet property="textView" destination="foh-zF-bqF" id="TR4-iZ-RzI"/>
+                        <outlet property="activityIndicator" destination="YKY-KG-tbu" id="C7A-fR-doX"/>
+                        <outlet property="imageToRecognize" destination="6Sy-Bf-gLU" id="2Jt-lu-abC"/>
+                        <outlet property="priceView" destination="xq6-Wr-obs" id="7Om-PO-mXT"/>
+                        <outlet property="productView" destination="XpU-pG-zoi" id="QlI-Pq-uI4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="220" y="363"/>
+            <point key="canvasLocation" x="198" y="357"/>
         </scene>
     </scenes>
 </document>

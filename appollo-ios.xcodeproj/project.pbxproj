@@ -8,13 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		3F53DB681BD5261400EEFF85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB671BD5261400EEFF85 /* AppDelegate.swift */; };
-		3F53DB6A1BD5261400EEFF85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB691BD5261400EEFF85 /* ViewController.swift */; };
 		3F53DB6D1BD5261400EEFF85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F53DB6B1BD5261400EEFF85 /* Main.storyboard */; };
 		3F53DB701BD5261400EEFF85 /* appollo_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB6E1BD5261400EEFF85 /* appollo_ios.xcdatamodeld */; };
 		3F53DB721BD5261400EEFF85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F53DB711BD5261400EEFF85 /* Assets.xcassets */; };
 		3F53DB751BD5261400EEFF85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F53DB731BD5261400EEFF85 /* LaunchScreen.storyboard */; };
 		3F53DB801BD5261500EEFF85 /* appollo_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB7F1BD5261500EEFF85 /* appollo_iosTests.swift */; };
 		3F53DB8B1BD5261500EEFF85 /* appollo_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB8A1BD5261500EEFF85 /* appollo_iosUITests.swift */; };
+		3F8880401BD66A7300586E04 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F88803A1BD66A5500586E04 /* TesseractOCR.framework */; };
+		3F8880411BD66A7300586E04 /* TesseractOCR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F88803A1BD66A5500586E04 /* TesseractOCR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3F8880461BD66A9300586E04 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8880451BD66A9300586E04 /* CoreImage.framework */; };
+		3F8880481BD66A9A00586E04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8880471BD66A9A00586E04 /* UIKit.framework */; };
+		3F88804A1BD66AA900586E04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8880491BD66AA900586E04 /* Foundation.framework */; };
+		3F88804D1BD66AD700586E04 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F88804C1BD66AD700586E04 /* CoreFoundation.framework */; };
+		3F8880521BD66BCD00586E04 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8880511BD66BCD00586E04 /* ScannerViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3F8880541BD674CE00586E04 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8880531BD674CE00586E04 /* libstdc++.6.0.9.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,12 +39,39 @@
 			remoteGlobalIDString = 3F53DB631BD5261400EEFF85;
 			remoteInfo = "appollo-ios";
 		};
+		3F8880391BD66A5500586E04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F8880351BD66A5500586E04 /* Tesseract OCR iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 73C0A7BA1A5955E200D823D4;
+			remoteInfo = TesseractOCR;
+		};
+		3F8880421BD66A7300586E04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F8880351BD66A5500586E04 /* Tesseract OCR iOS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 73C0A77B1A592C2B00D823D4;
+			remoteInfo = TesseractOCR;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3F8880441BD66A7400586E04 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3F8880411BD66A7300586E04 /* TesseractOCR.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3F53DB641BD5261400EEFF85 /* appollo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "appollo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F53DB671BD5261400EEFF85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F53DB691BD5261400EEFF85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F53DB6C1BD5261400EEFF85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F53DB6F1BD5261400EEFF85 /* appollo_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = appollo_ios.xcdatamodel; sourceTree = "<group>"; };
 		3F53DB711BD5261400EEFF85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +83,14 @@
 		3F53DB861BD5261500EEFF85 /* appollo-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "appollo-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F53DB8A1BD5261500EEFF85 /* appollo_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appollo_iosUITests.swift; sourceTree = "<group>"; };
 		3F53DB8C1BD5261500EEFF85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F8880351BD66A5500586E04 /* Tesseract OCR iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Tesseract OCR iOS.xcodeproj"; path = "vendor/Tesseract-OCR-iOS/Tesseract OCR iOS.xcodeproj"; sourceTree = "<group>"; };
+		3F8880451BD66A9300586E04 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		3F8880471BD66A9A00586E04 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3F8880491BD66AA900586E04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3F88804C1BD66AD700586E04 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		3F8880511BD66BCD00586E04 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerViewController.swift; path = scanner/viewcontrollers/ScannerViewController.swift; sourceTree = "<group>"; };
+		3F8880531BD674CE00586E04 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		3F9806281BD666B9000A51EF /* appollo-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "appollo-ios-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +98,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F8880541BD674CE00586E04 /* libstdc++.6.0.9.tbd in Frameworks */,
+				3F88804D1BD66AD700586E04 /* CoreFoundation.framework in Frameworks */,
+				3F88804A1BD66AA900586E04 /* Foundation.framework in Frameworks */,
+				3F8880481BD66A9A00586E04 /* UIKit.framework in Frameworks */,
+				3F8880461BD66A9300586E04 /* CoreImage.framework in Frameworks */,
+				3F8880401BD66A7300586E04 /* TesseractOCR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +127,13 @@
 		3F53DB5B1BD5261400EEFF85 = {
 			isa = PBXGroup;
 			children = (
+				3F8880351BD66A5500586E04 /* Tesseract OCR iOS.xcodeproj */,
+				3F98063E1BD6671B000A51EF /* vendor */,
 				3F53DB661BD5261400EEFF85 /* appollo-ios */,
 				3F53DB7E1BD5261500EEFF85 /* appollo-iosTests */,
 				3F53DB891BD5261500EEFF85 /* appollo-iosUITests */,
 				3F53DB651BD5261400EEFF85 /* Products */,
+				3F88804B1BD66ABB00586E04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +150,14 @@
 		3F53DB661BD5261400EEFF85 /* appollo-ios */ = {
 			isa = PBXGroup;
 			children = (
+				3F88804E1BD66B4200586E04 /* scanner */,
 				3F53DB671BD5261400EEFF85 /* AppDelegate.swift */,
-				3F53DB691BD5261400EEFF85 /* ViewController.swift */,
 				3F53DB6B1BD5261400EEFF85 /* Main.storyboard */,
 				3F53DB711BD5261400EEFF85 /* Assets.xcassets */,
 				3F53DB731BD5261400EEFF85 /* LaunchScreen.storyboard */,
 				3F53DB761BD5261400EEFF85 /* Info.plist */,
 				3F53DB6E1BD5261400EEFF85 /* appollo_ios.xcdatamodeld */,
+				3F9806281BD666B9000A51EF /* appollo-ios-Bridging-Header.h */,
 			);
 			path = "appollo-ios";
 			sourceTree = "<group>";
@@ -128,6 +180,57 @@
 			path = "appollo-iosUITests";
 			sourceTree = "<group>";
 		};
+		3F8880361BD66A5500586E04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F88803A1BD66A5500586E04 /* TesseractOCR.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F88804B1BD66ABB00586E04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F8880531BD674CE00586E04 /* libstdc++.6.0.9.tbd */,
+				3F88804C1BD66AD700586E04 /* CoreFoundation.framework */,
+				3F8880491BD66AA900586E04 /* Foundation.framework */,
+				3F8880471BD66A9A00586E04 /* UIKit.framework */,
+				3F8880451BD66A9300586E04 /* CoreImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F88804E1BD66B4200586E04 /* scanner */ = {
+			isa = PBXGroup;
+			children = (
+				3F8880501BD66B5F00586E04 /* delegate */,
+				3F88804F1BD66B5500586E04 /* viewcontrollers */,
+			);
+			name = scanner;
+			sourceTree = "<group>";
+		};
+		3F88804F1BD66B5500586E04 /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				3F8880511BD66BCD00586E04 /* ScannerViewController.swift */,
+			);
+			name = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		3F8880501BD66B5F00586E04 /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = delegate;
+			sourceTree = "<group>";
+		};
+		3F98063E1BD6671B000A51EF /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = vendor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +241,12 @@
 				3F53DB601BD5261400EEFF85 /* Sources */,
 				3F53DB611BD5261400EEFF85 /* Frameworks */,
 				3F53DB621BD5261400EEFF85 /* Resources */,
+				3F8880441BD66A7400586E04 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3F8880431BD66A7300586E04 /* PBXTargetDependency */,
 			);
 			name = "appollo-ios";
 			productName = "appollo-ios";
@@ -190,6 +295,7 @@
 		3F53DB5C1BD5261400EEFF85 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Appollo;
 				TargetAttributes = {
@@ -217,6 +323,12 @@
 			mainGroup = 3F53DB5B1BD5261400EEFF85;
 			productRefGroup = 3F53DB651BD5261400EEFF85 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3F8880361BD66A5500586E04 /* Products */;
+					ProjectRef = 3F8880351BD66A5500586E04 /* Tesseract OCR iOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3F53DB631BD5261400EEFF85 /* appollo-ios */,
@@ -225,6 +337,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3F88803A1BD66A5500586E04 /* TesseractOCR.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TesseractOCR.framework;
+			remoteRef = 3F8880391BD66A5500586E04 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3F53DB621BD5261400EEFF85 /* Resources */ = {
@@ -259,8 +381,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F53DB701BD5261400EEFF85 /* appollo_ios.xcdatamodeld in Sources */,
-				3F53DB6A1BD5261400EEFF85 /* ViewController.swift in Sources */,
 				3F53DB681BD5261400EEFF85 /* AppDelegate.swift in Sources */,
+				3F8880521BD66BCD00586E04 /* ScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +414,11 @@
 			isa = PBXTargetDependency;
 			target = 3F53DB631BD5261400EEFF85 /* appollo-ios */;
 			targetProxy = 3F53DB871BD5261500EEFF85 /* PBXContainerItemProxy */;
+		};
+		3F8880431BD66A7300586E04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TesseractOCR;
+			targetProxy = 3F8880421BD66A7300586E04 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -402,10 +529,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "appollo-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = " -lstdc++";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.appollo.appollo-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "appollo-ios/appollo-ios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -413,10 +547,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "appollo-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = " -lstdc++";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.appollo.appollo-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "appollo-ios/appollo-ios-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -487,6 +627,7 @@
 				3F53DB911BD5261500EEFF85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F53DB921BD5261500EEFF85 /* Build configuration list for PBXNativeTarget "appollo-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +636,7 @@
 				3F53DB941BD5261500EEFF85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F53DB951BD5261500EEFF85 /* Build configuration list for PBXNativeTarget "appollo-iosUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +645,7 @@
 				3F53DB971BD5261500EEFF85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

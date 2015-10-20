@@ -1,0 +1,4 @@
+[submodule "vendor/Tesseract-OCR-iOS"]
+	path = vendor/Tesseract-OCR-iOS
+	url = https://github.com/gali8/Tesseract-OCR-iOS.git
+	ignore = dirty
