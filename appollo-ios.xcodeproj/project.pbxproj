@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BDAB4CE1BD6955800915058 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDAB4CD1BD6955800915058 /* libz.tbd */; };
+		0BDAB4D01BD6961500915058 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 0BDAB4CF1BD6961500915058 /* tessdata */; settings = {ASSET_TAGS = (); }; };
 		3F53DB681BD5261400EEFF85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB671BD5261400EEFF85 /* AppDelegate.swift */; };
 		3F53DB6D1BD5261400EEFF85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F53DB6B1BD5261400EEFF85 /* Main.storyboard */; };
 		3F53DB701BD5261400EEFF85 /* appollo_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB6E1BD5261400EEFF85 /* appollo_ios.xcdatamodeld */; };
@@ -70,6 +72,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0BDAB4CD1BD6955800915058 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		0BDAB4CF1BD6961500915058 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = "tesseract-ocr/tessdata"; sourceTree = "<group>"; };
 		3F53DB641BD5261400EEFF85 /* appollo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "appollo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F53DB671BD5261400EEFF85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F53DB6C1BD5261400EEFF85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BDAB4CE1BD6955800915058 /* libz.tbd in Frameworks */,
 				3F8880541BD674CE00586E04 /* libstdc++.6.0.9.tbd in Frameworks */,
 				3F88804D1BD66AD700586E04 /* CoreFoundation.framework in Frameworks */,
 				3F88804A1BD66AA900586E04 /* Foundation.framework in Frameworks */,
@@ -150,6 +155,7 @@
 		3F53DB661BD5261400EEFF85 /* appollo-ios */ = {
 			isa = PBXGroup;
 			children = (
+				0BDAB4CF1BD6961500915058 /* tessdata */,
 				3F88804E1BD66B4200586E04 /* scanner */,
 				3F53DB671BD5261400EEFF85 /* AppDelegate.swift */,
 				3F53DB6B1BD5261400EEFF85 /* Main.storyboard */,
@@ -191,6 +197,7 @@
 		3F88804B1BD66ABB00586E04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BDAB4CD1BD6955800915058 /* libz.tbd */,
 				3F8880531BD674CE00586E04 /* libstdc++.6.0.9.tbd */,
 				3F88804C1BD66AD700586E04 /* CoreFoundation.framework */,
 				3F8880491BD66AA900586E04 /* Foundation.framework */,
@@ -354,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F53DB751BD5261400EEFF85 /* LaunchScreen.storyboard in Resources */,
+				0BDAB4D01BD6961500915058 /* tessdata in Resources */,
 				3F53DB721BD5261400EEFF85 /* Assets.xcassets in Resources */,
 				3F53DB6D1BD5261400EEFF85 /* Main.storyboard in Resources */,
 			);

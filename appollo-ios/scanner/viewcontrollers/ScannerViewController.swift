@@ -42,7 +42,7 @@ class ScannerViewController: UIViewController, UIImagePickerControllerDelegate, 
             imgPicker.sourceType = UIImagePickerControllerSourceType.Camera
             self.presentViewController(imgPicker, animated: true, completion: nil)
         } else {
-            self.recognizeImage(UIImage(named: "etiqueta")!)
+            self.recognizeImage(UIImage(named: "etiqueta2")!)
         }
     }
 
@@ -55,7 +55,7 @@ class ScannerViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func recognizeImage(image: UIImage) {
         // Preprocess the image so Tesseract's recognition will be more accurate
-        let scaledImage = scaleImage(image, maxDimension: 640)
+        let scaledImage = image // scaleImage(image, maxDimension: 640)
         let bwImage: UIImage = scaledImage.g8_blackAndWhite()
         
         // Animate a progress activity indicator
