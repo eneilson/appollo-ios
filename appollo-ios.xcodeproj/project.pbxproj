@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		0BDAB4CE1BD6955800915058 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDAB4CD1BD6955800915058 /* libz.tbd */; };
 		0BDAB4D01BD6961500915058 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 0BDAB4CF1BD6961500915058 /* tessdata */; settings = {ASSET_TAGS = (); }; };
+		3F195CC61BDA448700CF7026 /* ShoppingCartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CC51BDA448700CF7026 /* ShoppingCartTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3F195CC91BDA44C600CF7026 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CC81BDA44C600CF7026 /* CartItem.swift */; settings = {ASSET_TAGS = (); }; };
+		3F195CCB1BDA44D500CF7026 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CCA1BDA44D500CF7026 /* ShoppingCart.swift */; settings = {ASSET_TAGS = (); }; };
+		3F195CCE1BDA4A0900CF7026 /* ShoppingCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CCD1BDA4A0900CF7026 /* ShoppingCartTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		3F195CD01BDA6DA100CF7026 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CCF1BDA6DA100CF7026 /* AddProductViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3F53DB681BD5261400EEFF85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB671BD5261400EEFF85 /* AppDelegate.swift */; };
 		3F53DB6D1BD5261400EEFF85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F53DB6B1BD5261400EEFF85 /* Main.storyboard */; };
 		3F53DB701BD5261400EEFF85 /* appollo_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB6E1BD5261400EEFF85 /* appollo_ios.xcdatamodeld */; };
@@ -74,6 +79,11 @@
 /* Begin PBXFileReference section */
 		0BDAB4CD1BD6955800915058 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		0BDAB4CF1BD6961500915058 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = "tesseract-ocr/tessdata"; sourceTree = "<group>"; };
+		3F195CC51BDA448700CF7026 /* ShoppingCartTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCartTableViewController.swift; path = carrinho/viewcontrollers/ShoppingCartTableViewController.swift; sourceTree = "<group>"; };
+		3F195CC81BDA44C600CF7026 /* CartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CartItem.swift; path = carrinho/domain/CartItem.swift; sourceTree = "<group>"; };
+		3F195CCA1BDA44D500CF7026 /* ShoppingCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCart.swift; path = carrinho/domain/ShoppingCart.swift; sourceTree = "<group>"; };
+		3F195CCD1BDA4A0900CF7026 /* ShoppingCartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCartTableViewCell.swift; path = carrinho/viewcontrollers/cell/ShoppingCartTableViewCell.swift; sourceTree = "<group>"; };
+		3F195CCF1BDA6DA100CF7026 /* AddProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddProductViewController.swift; path = carrinho/viewcontrollers/AddProductViewController.swift; sourceTree = "<group>"; };
 		3F53DB641BD5261400EEFF85 /* appollo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "appollo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F53DB671BD5261400EEFF85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F53DB6C1BD5261400EEFF85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,6 +139,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F195CC31BDA445700CF7026 /* carrinho */ = {
+			isa = PBXGroup;
+			children = (
+				3F195CC71BDA449B00CF7026 /* domain */,
+				3F195CC41BDA446300CF7026 /* viewcontrollers */,
+			);
+			name = carrinho;
+			sourceTree = "<group>";
+		};
+		3F195CC41BDA446300CF7026 /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				3F195CCC1BDA49DD00CF7026 /* cell */,
+				3F195CC51BDA448700CF7026 /* ShoppingCartTableViewController.swift */,
+				3F195CCF1BDA6DA100CF7026 /* AddProductViewController.swift */,
+			);
+			name = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		3F195CC71BDA449B00CF7026 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				3F195CC81BDA44C600CF7026 /* CartItem.swift */,
+				3F195CCA1BDA44D500CF7026 /* ShoppingCart.swift */,
+			);
+			name = domain;
+			sourceTree = "<group>";
+		};
+		3F195CCC1BDA49DD00CF7026 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				3F195CCD1BDA4A0900CF7026 /* ShoppingCartTableViewCell.swift */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
 		3F53DB5B1BD5261400EEFF85 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				0BDAB4CF1BD6961500915058 /* tessdata */,
+				3F195CC31BDA445700CF7026 /* carrinho */,
 				3F88804E1BD66B4200586E04 /* scanner */,
 				3F53DB671BD5261400EEFF85 /* AppDelegate.swift */,
 				3F53DB6B1BD5261400EEFF85 /* Main.storyboard */,
@@ -388,9 +435,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F195CCE1BDA4A0900CF7026 /* ShoppingCartTableViewCell.swift in Sources */,
 				3F53DB701BD5261400EEFF85 /* appollo_ios.xcdatamodeld in Sources */,
+				3F195CD01BDA6DA100CF7026 /* AddProductViewController.swift in Sources */,
+				3F195CC91BDA44C600CF7026 /* CartItem.swift in Sources */,
 				3F53DB681BD5261400EEFF85 /* AppDelegate.swift in Sources */,
+				3F195CCB1BDA44D500CF7026 /* ShoppingCart.swift in Sources */,
 				3F8880521BD66BCD00586E04 /* ScannerViewController.swift in Sources */,
+				3F195CC61BDA448700CF7026 /* ShoppingCartTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
