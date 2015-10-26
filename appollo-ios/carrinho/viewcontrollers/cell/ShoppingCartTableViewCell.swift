@@ -10,7 +10,7 @@ import UIKit
 
 class ShoppingCartTableViewCell: UITableViewCell {
 
-    var item: CartItem!
+    var item: ShoppingCartItem!
     
     @IBOutlet weak var totalView: UILabel!
     @IBOutlet weak var unitPriceView: UILabel!
@@ -27,7 +27,7 @@ class ShoppingCartTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func configure(item: CartItem) {
+    func configure(item: ShoppingCartItem) {
         self.item = item
         
         nameView.text = self.item.name

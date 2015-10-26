@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0BDAB4CE1BD6955800915058 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDAB4CD1BD6955800915058 /* libz.tbd */; };
-		0BDAB4D01BD6961500915058 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 0BDAB4CF1BD6961500915058 /* tessdata */; settings = {ASSET_TAGS = (); }; };
-		3F195CC61BDA448700CF7026 /* ShoppingCartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CC51BDA448700CF7026 /* ShoppingCartTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		3F195CC91BDA44C600CF7026 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CC81BDA44C600CF7026 /* CartItem.swift */; settings = {ASSET_TAGS = (); }; };
-		3F195CCB1BDA44D500CF7026 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CCA1BDA44D500CF7026 /* ShoppingCart.swift */; settings = {ASSET_TAGS = (); }; };
-		3F195CCE1BDA4A0900CF7026 /* ShoppingCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CCD1BDA4A0900CF7026 /* ShoppingCartTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		3F195CD01BDA6DA100CF7026 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CCF1BDA6DA100CF7026 /* AddProductViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		0BDAB4D01BD6961500915058 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 0BDAB4CF1BD6961500915058 /* tessdata */; };
+		3F195CC61BDA448700CF7026 /* ShoppingCartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CC51BDA448700CF7026 /* ShoppingCartTableViewController.swift */; };
+		3F195CC91BDA44C600CF7026 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CC81BDA44C600CF7026 /* CartItem.swift */; };
+		3F195CCB1BDA44D500CF7026 /* ShoppingCart2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CCA1BDA44D500CF7026 /* ShoppingCart2.swift */; };
+		3F195CCE1BDA4A0900CF7026 /* ShoppingCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CCD1BDA4A0900CF7026 /* ShoppingCartTableViewCell.swift */; };
+		3F195CD01BDA6DA100CF7026 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CCF1BDA6DA100CF7026 /* AddProductViewController.swift */; };
 		3F53DB681BD5261400EEFF85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB671BD5261400EEFF85 /* AppDelegate.swift */; };
 		3F53DB6D1BD5261400EEFF85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F53DB6B1BD5261400EEFF85 /* Main.storyboard */; };
 		3F53DB701BD5261400EEFF85 /* appollo_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB6E1BD5261400EEFF85 /* appollo_ios.xcdatamodeld */; };
@@ -27,8 +27,14 @@
 		3F8880481BD66A9A00586E04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8880471BD66A9A00586E04 /* UIKit.framework */; };
 		3F88804A1BD66AA900586E04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8880491BD66AA900586E04 /* Foundation.framework */; };
 		3F88804D1BD66AD700586E04 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F88804C1BD66AD700586E04 /* CoreFoundation.framework */; };
-		3F8880521BD66BCD00586E04 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8880511BD66BCD00586E04 /* ScannerViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3F8880521BD66BCD00586E04 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8880511BD66BCD00586E04 /* ScannerViewController.swift */; };
 		3F8880541BD674CE00586E04 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8880531BD674CE00586E04 /* libstdc++.6.0.9.tbd */; };
+		3F9435FC1BDE62F300C83121 /* SwiftRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9435FB1BDE62F300C83121 /* SwiftRecord.framework */; };
+		3F9435FD1BDE62F300C83121 /* SwiftRecord.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9435FB1BDE62F300C83121 /* SwiftRecord.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3F9436141BDE653500C83121 /* ShoppingCartItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9436101BDE653500C83121 /* ShoppingCartItem+CoreDataProperties.swift */; };
+		3F9436151BDE653500C83121 /* ShoppingCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9436111BDE653500C83121 /* ShoppingCartItem.swift */; };
+		3F9436161BDE653500C83121 /* ShoppingCart+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9436121BDE653500C83121 /* ShoppingCart+CoreDataProperties.swift */; };
+		3F9436171BDE653500C83121 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9436131BDE653500C83121 /* ShoppingCart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +76,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				3F8880411BD66A7300586E04 /* TesseractOCR.framework in Embed Frameworks */,
+				3F9435FD1BDE62F300C83121 /* SwiftRecord.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,7 +88,7 @@
 		0BDAB4CF1BD6961500915058 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = "tesseract-ocr/tessdata"; sourceTree = "<group>"; };
 		3F195CC51BDA448700CF7026 /* ShoppingCartTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCartTableViewController.swift; path = carrinho/viewcontrollers/ShoppingCartTableViewController.swift; sourceTree = "<group>"; };
 		3F195CC81BDA44C600CF7026 /* CartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CartItem.swift; path = carrinho/domain/CartItem.swift; sourceTree = "<group>"; };
-		3F195CCA1BDA44D500CF7026 /* ShoppingCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCart.swift; path = carrinho/domain/ShoppingCart.swift; sourceTree = "<group>"; };
+		3F195CCA1BDA44D500CF7026 /* ShoppingCart2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCart2.swift; path = carrinho/domain/ShoppingCart2.swift; sourceTree = "<group>"; };
 		3F195CCD1BDA4A0900CF7026 /* ShoppingCartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCartTableViewCell.swift; path = carrinho/viewcontrollers/cell/ShoppingCartTableViewCell.swift; sourceTree = "<group>"; };
 		3F195CCF1BDA6DA100CF7026 /* AddProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddProductViewController.swift; path = carrinho/viewcontrollers/AddProductViewController.swift; sourceTree = "<group>"; };
 		3F53DB641BD5261400EEFF85 /* appollo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "appollo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +111,11 @@
 		3F88804C1BD66AD700586E04 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		3F8880511BD66BCD00586E04 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerViewController.swift; path = scanner/viewcontrollers/ScannerViewController.swift; sourceTree = "<group>"; };
 		3F8880531BD674CE00586E04 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		3F9435FB1BDE62F300C83121 /* SwiftRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftRecord.framework; path = vendor/SwiftRecord.framework; sourceTree = "<group>"; };
+		3F9436101BDE653500C83121 /* ShoppingCartItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ShoppingCartItem+CoreDataProperties.swift"; path = "carrinho/domain/ShoppingCartItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3F9436111BDE653500C83121 /* ShoppingCartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCartItem.swift; path = carrinho/domain/ShoppingCartItem.swift; sourceTree = "<group>"; };
+		3F9436121BDE653500C83121 /* ShoppingCart+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ShoppingCart+CoreDataProperties.swift"; path = "carrinho/domain/ShoppingCart+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3F9436131BDE653500C83121 /* ShoppingCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCart.swift; path = carrinho/domain/ShoppingCart.swift; sourceTree = "<group>"; };
 		3F9806281BD666B9000A51EF /* appollo-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "appollo-ios-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +129,7 @@
 				3F88804D1BD66AD700586E04 /* CoreFoundation.framework in Frameworks */,
 				3F88804A1BD66AA900586E04 /* Foundation.framework in Frameworks */,
 				3F8880481BD66A9A00586E04 /* UIKit.framework in Frameworks */,
+				3F9435FC1BDE62F300C83121 /* SwiftRecord.framework in Frameworks */,
 				3F8880461BD66A9300586E04 /* CoreImage.framework in Frameworks */,
 				3F8880401BD66A7300586E04 /* TesseractOCR.framework in Frameworks */,
 			);
@@ -161,8 +174,12 @@
 		3F195CC71BDA449B00CF7026 /* domain */ = {
 			isa = PBXGroup;
 			children = (
+				3F9436101BDE653500C83121 /* ShoppingCartItem+CoreDataProperties.swift */,
+				3F9436111BDE653500C83121 /* ShoppingCartItem.swift */,
+				3F9436121BDE653500C83121 /* ShoppingCart+CoreDataProperties.swift */,
+				3F9436131BDE653500C83121 /* ShoppingCart.swift */,
 				3F195CC81BDA44C600CF7026 /* CartItem.swift */,
-				3F195CCA1BDA44D500CF7026 /* ShoppingCart.swift */,
+				3F195CCA1BDA44D500CF7026 /* ShoppingCart2.swift */,
 			);
 			name = domain;
 			sourceTree = "<group>";
@@ -281,6 +298,7 @@
 		3F98063E1BD6671B000A51EF /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				3F9435FB1BDE62F300C83121 /* SwiftRecord.framework */,
 			);
 			name = vendor;
 			sourceTree = "<group>";
@@ -435,13 +453,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9436161BDE653500C83121 /* ShoppingCart+CoreDataProperties.swift in Sources */,
 				3F195CCE1BDA4A0900CF7026 /* ShoppingCartTableViewCell.swift in Sources */,
 				3F53DB701BD5261400EEFF85 /* appollo_ios.xcdatamodeld in Sources */,
+				3F9436151BDE653500C83121 /* ShoppingCartItem.swift in Sources */,
 				3F195CD01BDA6DA100CF7026 /* AddProductViewController.swift in Sources */,
 				3F195CC91BDA44C600CF7026 /* CartItem.swift in Sources */,
 				3F53DB681BD5261400EEFF85 /* AppDelegate.swift in Sources */,
-				3F195CCB1BDA44D500CF7026 /* ShoppingCart.swift in Sources */,
+				3F9436171BDE653500C83121 /* ShoppingCart.swift in Sources */,
+				3F195CCB1BDA44D500CF7026 /* ShoppingCart2.swift in Sources */,
 				3F8880521BD66BCD00586E04 /* ScannerViewController.swift in Sources */,
+				3F9436141BDE653500C83121 /* ShoppingCartItem+CoreDataProperties.swift in Sources */,
 				3F195CC61BDA448700CF7026 /* ShoppingCartTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,6 +614,10 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vendor",
+				);
 				INFOPLIST_FILE = "appollo-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = " -lstdc++";
@@ -610,6 +636,10 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vendor",
+				);
 				INFOPLIST_FILE = "appollo-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = " -lstdc++";

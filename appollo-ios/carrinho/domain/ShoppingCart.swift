@@ -1,28 +1,23 @@
 //
-//  Carrinho.swift
+//  ShoppingCart.swift
 //  appollo-ios
 //
-//  Created by Student on 10/23/15.
+//  Created by Student on 10/26/15.
 //  Copyright © 2015 Appollo. All rights reserved.
 //
 
 import Foundation
+import CoreData
 
-class ShoppingCart: NSObject {
-    
-    var items: [CartItem] = []
-    var dateCreated: NSDate
-    var local: String // nome do supermercado
-    
-    init(local: String) {
-        self.local = local
-        dateCreated = NSDate()
-    }
-    
+@objc(ShoppingCart)
+class ShoppingCart: NSManagedObject {
+
     func total() -> Double {
         var total: Double = 0
-        for item in items {
-            total += Double(item.total())
+        if let _items = items {
+            for item in _items {
+                total += Double(item.total())
+            }
         }
         
         return total

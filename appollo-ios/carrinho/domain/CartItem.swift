@@ -14,6 +14,7 @@ class CartItem: NSObject {
     var price: Float
     var photo: CGImage?
     var quantity: Float
+    var automatic: Bool = false
     
     init(name: String, price: Float, quantity: Float) {
         self.name = name
