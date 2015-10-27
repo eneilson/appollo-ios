@@ -42,12 +42,12 @@ class ShoppingCartTableViewCell: UITableViewCell {
         
         totalView.text = formatter.stringFromNumber(item.total())
         
-        if let photo = item.photo {
-            photoImageView.image = UIImage(CGImage: photo)
-        } else {
+//        if let photo = item.photo {
+            photoImageView.image = item.photo
+  //      } else {
             // default image
-            photoImageView.image = UIImage(named: "no-image")
-        }
+    //        photoImageView.image = UIImage(named: "no-image")
+      //  }
 
     }
     

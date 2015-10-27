@@ -55,14 +55,14 @@ class ShoppingCartTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return shoppingCart.items.count
+        return shoppingCart.items != nil ? shoppingCart.items!.count : 0
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath) as! ShoppingCartTableViewCell
 
-        cell.configure(shoppingCart.items[indexPath.item])
+        cell.configure(shoppingCart.items![indexPath.item] as! ShoppingCartItem)
 
         return cell
     }
@@ -79,7 +79,7 @@ class ShoppingCartTableViewController: UITableViewController {
         // add the action button you want to show when swiping on tableView's cell , in this case add the delete button.
         let deleteAction = UITableViewRowAction(style: .Default, title: "Delete", handler: { (action , indexPath) -> Void in
 
-            self.shoppingCart.items.removeAtIndex(indexPath.item)
+            self.shoppingCart.items!.removeAtIndex(indexPath.item)
             self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Top)
             self.updateTotalTitle()
         })
