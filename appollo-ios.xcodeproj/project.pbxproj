@@ -37,6 +37,8 @@
 		3F88804A1BD66AA900586E04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8880491BD66AA900586E04 /* Foundation.framework */; };
 		3F88804D1BD66AD700586E04 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F88804C1BD66AD700586E04 /* CoreFoundation.framework */; };
 		3F8880541BD674CE00586E04 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8880531BD674CE00586E04 /* libstdc++.6.0.9.tbd */; };
+		3FFD5DCB1BE105D000C0DB2B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD5DCA1BE105D000C0DB2B /* HistoryViewController.swift */; };
+		3FFD5DCD1BE1096B00C0DB2B /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD5DCC1BE1096B00C0DB2B /* HistoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,8 @@
 		3F88804C1BD66AD700586E04 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		3F8880531BD674CE00586E04 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		3F9806281BD666B9000A51EF /* appollo-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "appollo-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		3FFD5DCA1BE105D000C0DB2B /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = Classes/tabs/controllers/HistoryViewController.swift; sourceTree = "<group>"; };
+		3FFD5DCC1BE1096B00C0DB2B /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewCell.swift; path = "Classes/shopping-cart/viewcontrollers/cell/HistoryTableViewCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,7 @@
 		3F195CC41BDA446300CF7026 /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				3FFD5DCA1BE105D000C0DB2B /* HistoryViewController.swift */,
 				3F195CCC1BDA49DD00CF7026 /* cell */,
 				0B62EC781BE05F1700481FD7 /* ShoppingCartTableViewController.swift */,
 				0B62EC761BE05F1000481FD7 /* AddProductViewController.swift */,
@@ -240,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				0B62EC7A1BE05F2000481FD7 /* ShoppingCartTableViewCell.swift */,
+				3FFD5DCC1BE1096B00C0DB2B /* HistoryTableViewCell.swift */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -429,6 +435,7 @@
 				TargetAttributes = {
 					3F53DB631BD5261400EEFF85 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 59626Z99Z5;
 					};
 					3F53DB7A1BD5261500EEFF85 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -509,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFD5DCD1BE1096B00C0DB2B /* HistoryTableViewCell.swift in Sources */,
 				0B62EC731BE05EDF00481FD7 /* AppDelegate.swift in Sources */,
 				0B62EC811BE05F3200481FD7 /* ShoppingCart+CoreDataProperties.swift in Sources */,
 				0B62EC9C1BE083A700481FD7 /* MainTabBarController.swift in Sources */,
@@ -523,6 +531,7 @@
 				0B62EC751BE05EEB00481FD7 /* ScannerViewController.swift in Sources */,
 				0B62EC6B1BE05DBD00481FD7 /* SwiftRecord.swift in Sources */,
 				0B62EC821BE05F3200481FD7 /* ShoppingCartItem.swift in Sources */,
+				3FFD5DCB1BE105D000C0DB2B /* HistoryViewController.swift in Sources */,
 				0B62EC801BE05F3200481FD7 /* ShoppingCart.swift in Sources */,
 				0B62EC7B1BE05F2000481FD7 /* ShoppingCartTableViewCell.swift in Sources */,
 			);

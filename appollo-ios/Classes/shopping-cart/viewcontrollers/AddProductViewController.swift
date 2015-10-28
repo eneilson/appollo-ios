@@ -117,11 +117,11 @@ class AddProductViewController: UITableViewController, UINavigationControllerDel
         item.automatic = 0
         item.save()
         
-        let items = shoppingCart.items!.mutableCopy() as! NSMutableOrderedSet
-        items.insertObject(item, atIndex: 0)
-        shoppingCart.items = items
-        
-        shoppingCart.save()
+//        let items = shoppingCart.items!.mutableCopy() as! NSMutableOrderedSet
+//        items.insertObject(item, atIndex: 0)
+//        shoppingCart.items = items
+//        
+//        shoppingCart.save()
         
         self.navigationController?.popViewControllerAnimated(true) // back
     }
@@ -146,5 +146,13 @@ class AddProductViewController: UITableViewController, UINavigationControllerDel
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return [UIInterfaceOrientationMask.Portrait, UIInterfaceOrientationMask.PortraitUpsideDown]
+    }
 
 }
