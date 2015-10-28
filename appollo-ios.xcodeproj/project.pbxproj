@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B62EC6B1BE05DBD00481FD7 /* SwiftRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62EC6A1BE05DBD00481FD7 /* SwiftRecord.swift */; };
+		0B62EC711BE05ED600481FD7 /* DataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62EC701BE05ED600481FD7 /* DataGenerator.swift */; };
+		0B62EC731BE05EDF00481FD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62EC721BE05EDF00481FD7 /* AppDelegate.swift */; };
+		0B62EC751BE05EEB00481FD7 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62EC741BE05EEB00481FD7 /* ScannerViewController.swift */; };
+		0B62EC771BE05F1000481FD7 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62EC761BE05F1000481FD7 /* AddProductViewController.swift */; };
+		0B62EC791BE05F1700481FD7 /* ShoppingCartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62EC781BE05F1700481FD7 /* ShoppingCartTableViewController.swift */; };
+		0B62EC7B1BE05F2000481FD7 /* ShoppingCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62EC7A1BE05F2000481FD7 /* ShoppingCartTableViewCell.swift */; };
+		0B62EC801BE05F3200481FD7 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62EC7C1BE05F3200481FD7 /* ShoppingCart.swift */; };
+		0B62EC811BE05F3200481FD7 /* ShoppingCart+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62EC7D1BE05F3200481FD7 /* ShoppingCart+CoreDataProperties.swift */; };
+		0B62EC821BE05F3200481FD7 /* ShoppingCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62EC7E1BE05F3200481FD7 /* ShoppingCartItem.swift */; };
+		0B62EC831BE05F3200481FD7 /* ShoppingCartItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62EC7F1BE05F3200481FD7 /* ShoppingCartItem+CoreDataProperties.swift */; };
+		0B62EC851BE05F4400481FD7 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 0B62EC841BE05F4400481FD7 /* tessdata */; };
+		0B62EC951BE06D0C00481FD7 /* SaveThePiggyApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62EC941BE06D0C00481FD7 /* SaveThePiggyApperance.swift */; };
+		0B62EC981BE0714300481FD7 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62EC971BE0714300481FD7 /* UIColor+Hex.swift */; };
+		0B62EC9C1BE083A700481FD7 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62EC9B1BE083A700481FD7 /* MainTabBarController.swift */; };
+		0B62ECAB1BE0883800481FD7 /* UIController+OrientationSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62ECAA1BE0883800481FD7 /* UIController+OrientationSupport.swift */; };
 		0BDAB4CE1BD6955800915058 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDAB4CD1BD6955800915058 /* libz.tbd */; };
-		0BDAB4D01BD6961500915058 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 0BDAB4CF1BD6961500915058 /* tessdata */; };
-		3F195CC61BDA448700CF7026 /* ShoppingCartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CC51BDA448700CF7026 /* ShoppingCartTableViewController.swift */; };
-		3F195CC91BDA44C600CF7026 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CC81BDA44C600CF7026 /* CartItem.swift */; };
-		3F195CCB1BDA44D500CF7026 /* ShoppingCart2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CCA1BDA44D500CF7026 /* ShoppingCart2.swift */; };
-		3F195CCE1BDA4A0900CF7026 /* ShoppingCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CCD1BDA4A0900CF7026 /* ShoppingCartTableViewCell.swift */; };
-		3F195CD01BDA6DA100CF7026 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F195CCF1BDA6DA100CF7026 /* AddProductViewController.swift */; };
-		3F53DB681BD5261400EEFF85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB671BD5261400EEFF85 /* AppDelegate.swift */; };
 		3F53DB6D1BD5261400EEFF85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F53DB6B1BD5261400EEFF85 /* Main.storyboard */; };
 		3F53DB701BD5261400EEFF85 /* appollo_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB6E1BD5261400EEFF85 /* appollo_ios.xcdatamodeld */; };
 		3F53DB721BD5261400EEFF85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F53DB711BD5261400EEFF85 /* Assets.xcassets */; };
@@ -27,14 +36,7 @@
 		3F8880481BD66A9A00586E04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8880471BD66A9A00586E04 /* UIKit.framework */; };
 		3F88804A1BD66AA900586E04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8880491BD66AA900586E04 /* Foundation.framework */; };
 		3F88804D1BD66AD700586E04 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F88804C1BD66AD700586E04 /* CoreFoundation.framework */; };
-		3F8880521BD66BCD00586E04 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8880511BD66BCD00586E04 /* ScannerViewController.swift */; };
 		3F8880541BD674CE00586E04 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8880531BD674CE00586E04 /* libstdc++.6.0.9.tbd */; };
-		3F9435FC1BDE62F300C83121 /* SwiftRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9435FB1BDE62F300C83121 /* SwiftRecord.framework */; };
-		3F9435FD1BDE62F300C83121 /* SwiftRecord.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9435FB1BDE62F300C83121 /* SwiftRecord.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3F9436141BDE653500C83121 /* ShoppingCartItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9436101BDE653500C83121 /* ShoppingCartItem+CoreDataProperties.swift */; };
-		3F9436151BDE653500C83121 /* ShoppingCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9436111BDE653500C83121 /* ShoppingCartItem.swift */; };
-		3F9436161BDE653500C83121 /* ShoppingCart+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9436121BDE653500C83121 /* ShoppingCart+CoreDataProperties.swift */; };
-		3F9436171BDE653500C83121 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9436131BDE653500C83121 /* ShoppingCart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +78,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				3F8880411BD66A7300586E04 /* TesseractOCR.framework in Embed Frameworks */,
-				3F9435FD1BDE62F300C83121 /* SwiftRecord.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,15 +85,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B62EC6A1BE05DBD00481FD7 /* SwiftRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftRecord.swift; path = vendor/SwiftRecord/SwiftRecord.swift; sourceTree = "<group>"; };
+		0B62EC701BE05ED600481FD7 /* DataGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataGenerator.swift; path = Classes/dev/DataGenerator.swift; sourceTree = "<group>"; };
+		0B62EC721BE05EDF00481FD7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
+		0B62EC741BE05EEB00481FD7 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerViewController.swift; path = Classes/scanner/viewcontrollers/ScannerViewController.swift; sourceTree = "<group>"; };
+		0B62EC761BE05F1000481FD7 /* AddProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddProductViewController.swift; path = "Classes/shopping-cart/viewcontrollers/AddProductViewController.swift"; sourceTree = "<group>"; };
+		0B62EC781BE05F1700481FD7 /* ShoppingCartTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCartTableViewController.swift; path = "Classes/shopping-cart/viewcontrollers/ShoppingCartTableViewController.swift"; sourceTree = "<group>"; };
+		0B62EC7A1BE05F2000481FD7 /* ShoppingCartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCartTableViewCell.swift; path = "Classes/shopping-cart/viewcontrollers/cell/ShoppingCartTableViewCell.swift"; sourceTree = "<group>"; };
+		0B62EC7C1BE05F3200481FD7 /* ShoppingCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCart.swift; path = "Classes/shopping-cart/domain/ShoppingCart.swift"; sourceTree = "<group>"; };
+		0B62EC7D1BE05F3200481FD7 /* ShoppingCart+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ShoppingCart+CoreDataProperties.swift"; path = "Classes/shopping-cart/domain/ShoppingCart+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0B62EC7E1BE05F3200481FD7 /* ShoppingCartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCartItem.swift; path = "Classes/shopping-cart/domain/ShoppingCartItem.swift"; sourceTree = "<group>"; };
+		0B62EC7F1BE05F3200481FD7 /* ShoppingCartItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ShoppingCartItem+CoreDataProperties.swift"; path = "Classes/shopping-cart/domain/ShoppingCartItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0B62EC841BE05F4400481FD7 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = "Classes/tesseract-ocr/tessdata"; sourceTree = "<group>"; };
+		0B62EC941BE06D0C00481FD7 /* SaveThePiggyApperance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveThePiggyApperance.swift; path = Classes/apperance/SaveThePiggyApperance.swift; sourceTree = "<group>"; };
+		0B62EC971BE0714300481FD7 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "Classes/extensions/UIColor+Hex.swift"; sourceTree = "<group>"; };
+		0B62EC9B1BE083A700481FD7 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = Classes/tabs/controllers/MainTabBarController.swift; sourceTree = "<group>"; };
+		0B62ECAA1BE0883800481FD7 /* UIController+OrientationSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIController+OrientationSupport.swift"; path = "Classes/extensions/UIController+OrientationSupport.swift"; sourceTree = "<group>"; };
+		0B62ECAE1BE09E2600481FD7 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		0B62ECAF1BE09E2600481FD7 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		0BDAB4CD1BD6955800915058 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		0BDAB4CF1BD6961500915058 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = "tesseract-ocr/tessdata"; sourceTree = "<group>"; };
-		3F195CC51BDA448700CF7026 /* ShoppingCartTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCartTableViewController.swift; path = carrinho/viewcontrollers/ShoppingCartTableViewController.swift; sourceTree = "<group>"; };
-		3F195CC81BDA44C600CF7026 /* CartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CartItem.swift; path = carrinho/domain/CartItem.swift; sourceTree = "<group>"; };
-		3F195CCA1BDA44D500CF7026 /* ShoppingCart2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCart2.swift; path = carrinho/domain/ShoppingCart2.swift; sourceTree = "<group>"; };
-		3F195CCD1BDA4A0900CF7026 /* ShoppingCartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCartTableViewCell.swift; path = carrinho/viewcontrollers/cell/ShoppingCartTableViewCell.swift; sourceTree = "<group>"; };
-		3F195CCF1BDA6DA100CF7026 /* AddProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddProductViewController.swift; path = carrinho/viewcontrollers/AddProductViewController.swift; sourceTree = "<group>"; };
 		3F53DB641BD5261400EEFF85 /* appollo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "appollo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F53DB671BD5261400EEFF85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F53DB6C1BD5261400EEFF85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F53DB6F1BD5261400EEFF85 /* appollo_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = appollo_ios.xcdatamodel; sourceTree = "<group>"; };
 		3F53DB711BD5261400EEFF85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,13 +121,7 @@
 		3F8880471BD66A9A00586E04 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3F8880491BD66AA900586E04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3F88804C1BD66AD700586E04 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		3F8880511BD66BCD00586E04 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerViewController.swift; path = scanner/viewcontrollers/ScannerViewController.swift; sourceTree = "<group>"; };
 		3F8880531BD674CE00586E04 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
-		3F9435FB1BDE62F300C83121 /* SwiftRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftRecord.framework; path = vendor/SwiftRecord.framework; sourceTree = "<group>"; };
-		3F9436101BDE653500C83121 /* ShoppingCartItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ShoppingCartItem+CoreDataProperties.swift"; path = "carrinho/domain/ShoppingCartItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3F9436111BDE653500C83121 /* ShoppingCartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCartItem.swift; path = carrinho/domain/ShoppingCartItem.swift; sourceTree = "<group>"; };
-		3F9436121BDE653500C83121 /* ShoppingCart+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ShoppingCart+CoreDataProperties.swift"; path = "carrinho/domain/ShoppingCart+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3F9436131BDE653500C83121 /* ShoppingCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingCart.swift; path = carrinho/domain/ShoppingCart.swift; sourceTree = "<group>"; };
 		3F9806281BD666B9000A51EF /* appollo-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "appollo-ios-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +135,6 @@
 				3F88804D1BD66AD700586E04 /* CoreFoundation.framework in Frameworks */,
 				3F88804A1BD66AA900586E04 /* Foundation.framework in Frameworks */,
 				3F8880481BD66A9A00586E04 /* UIKit.framework in Frameworks */,
-				3F9435FC1BDE62F300C83121 /* SwiftRecord.framework in Frameworks */,
 				3F8880461BD66A9300586E04 /* CoreImage.framework in Frameworks */,
 				3F8880401BD66A7300586E04 /* TesseractOCR.framework in Frameworks */,
 			);
@@ -152,21 +157,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F195CC31BDA445700CF7026 /* carrinho */ = {
+		0B62EC691BE05D9300481FD7 /* SwiftRecord */ = {
+			isa = PBXGroup;
+			children = (
+				0B62EC6A1BE05DBD00481FD7 /* SwiftRecord.swift */,
+			);
+			name = SwiftRecord;
+			sourceTree = "<group>";
+		};
+		0B62EC6C1BE05E4500481FD7 /* dev */ = {
+			isa = PBXGroup;
+			children = (
+				0B62EC701BE05ED600481FD7 /* DataGenerator.swift */,
+			);
+			name = dev;
+			sourceTree = "<group>";
+		};
+		0B62EC931BE06CD200481FD7 /* apperance */ = {
+			isa = PBXGroup;
+			children = (
+				0B62EC941BE06D0C00481FD7 /* SaveThePiggyApperance.swift */,
+			);
+			name = apperance;
+			sourceTree = "<group>";
+		};
+		0B62EC961BE0712200481FD7 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0B62EC971BE0714300481FD7 /* UIColor+Hex.swift */,
+				0B62ECAA1BE0883800481FD7 /* UIController+OrientationSupport.swift */,
+			);
+			name = extensions;
+			sourceTree = "<group>";
+		};
+		0B62EC991BE0837100481FD7 /* tabs */ = {
+			isa = PBXGroup;
+			children = (
+				0B62EC9A1BE0837D00481FD7 /* controllers */,
+			);
+			name = tabs;
+			sourceTree = "<group>";
+		};
+		0B62EC9A1BE0837D00481FD7 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B62EC9B1BE083A700481FD7 /* MainTabBarController.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		3F195CC31BDA445700CF7026 /* shopping-cart */ = {
 			isa = PBXGroup;
 			children = (
 				3F195CC71BDA449B00CF7026 /* domain */,
 				3F195CC41BDA446300CF7026 /* viewcontrollers */,
 			);
-			name = carrinho;
+			name = "shopping-cart";
 			sourceTree = "<group>";
 		};
 		3F195CC41BDA446300CF7026 /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
 				3F195CCC1BDA49DD00CF7026 /* cell */,
-				3F195CC51BDA448700CF7026 /* ShoppingCartTableViewController.swift */,
-				3F195CCF1BDA6DA100CF7026 /* AddProductViewController.swift */,
+				0B62EC781BE05F1700481FD7 /* ShoppingCartTableViewController.swift */,
+				0B62EC761BE05F1000481FD7 /* AddProductViewController.swift */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -174,12 +228,10 @@
 		3F195CC71BDA449B00CF7026 /* domain */ = {
 			isa = PBXGroup;
 			children = (
-				3F9436101BDE653500C83121 /* ShoppingCartItem+CoreDataProperties.swift */,
-				3F9436111BDE653500C83121 /* ShoppingCartItem.swift */,
-				3F9436121BDE653500C83121 /* ShoppingCart+CoreDataProperties.swift */,
-				3F9436131BDE653500C83121 /* ShoppingCart.swift */,
-				3F195CC81BDA44C600CF7026 /* CartItem.swift */,
-				3F195CCA1BDA44D500CF7026 /* ShoppingCart2.swift */,
+				0B62EC7C1BE05F3200481FD7 /* ShoppingCart.swift */,
+				0B62EC7D1BE05F3200481FD7 /* ShoppingCart+CoreDataProperties.swift */,
+				0B62EC7E1BE05F3200481FD7 /* ShoppingCartItem.swift */,
+				0B62EC7F1BE05F3200481FD7 /* ShoppingCartItem+CoreDataProperties.swift */,
 			);
 			name = domain;
 			sourceTree = "<group>";
@@ -187,7 +239,7 @@
 		3F195CCC1BDA49DD00CF7026 /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				3F195CCD1BDA4A0900CF7026 /* ShoppingCartTableViewCell.swift */,
+				0B62EC7A1BE05F2000481FD7 /* ShoppingCartTableViewCell.swift */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -195,7 +247,6 @@
 		3F53DB5B1BD5261400EEFF85 = {
 			isa = PBXGroup;
 			children = (
-				3F8880351BD66A5500586E04 /* Tesseract OCR iOS.xcodeproj */,
 				3F98063E1BD6671B000A51EF /* vendor */,
 				3F53DB661BD5261400EEFF85 /* appollo-ios */,
 				3F53DB7E1BD5261500EEFF85 /* appollo-iosTests */,
@@ -218,10 +269,14 @@
 		3F53DB661BD5261400EEFF85 /* appollo-ios */ = {
 			isa = PBXGroup;
 			children = (
-				0BDAB4CF1BD6961500915058 /* tessdata */,
-				3F195CC31BDA445700CF7026 /* carrinho */,
+				0B62EC841BE05F4400481FD7 /* tessdata */,
+				0B62EC961BE0712200481FD7 /* extensions */,
+				0B62EC931BE06CD200481FD7 /* apperance */,
+				3F195CC31BDA445700CF7026 /* shopping-cart */,
 				3F88804E1BD66B4200586E04 /* scanner */,
-				3F53DB671BD5261400EEFF85 /* AppDelegate.swift */,
+				0B62EC991BE0837100481FD7 /* tabs */,
+				0B62EC6C1BE05E4500481FD7 /* dev */,
+				0B62EC721BE05EDF00481FD7 /* AppDelegate.swift */,
 				3F53DB6B1BD5261400EEFF85 /* Main.storyboard */,
 				3F53DB711BD5261400EEFF85 /* Assets.xcassets */,
 				3F53DB731BD5261400EEFF85 /* LaunchScreen.storyboard */,
@@ -283,7 +338,7 @@
 		3F88804F1BD66B5500586E04 /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
-				3F8880511BD66BCD00586E04 /* ScannerViewController.swift */,
+				0B62EC741BE05EEB00481FD7 /* ScannerViewController.swift */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -298,7 +353,8 @@
 		3F98063E1BD6671B000A51EF /* vendor */ = {
 			isa = PBXGroup;
 			children = (
-				3F9435FB1BDE62F300C83121 /* SwiftRecord.framework */,
+				0B62EC691BE05D9300481FD7 /* SwiftRecord */,
+				3F8880351BD66A5500586E04 /* Tesseract OCR iOS.xcodeproj */,
 			);
 			name = vendor;
 			sourceTree = "<group>";
@@ -426,7 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F53DB751BD5261400EEFF85 /* LaunchScreen.storyboard in Resources */,
-				0BDAB4D01BD6961500915058 /* tessdata in Resources */,
+				0B62EC851BE05F4400481FD7 /* tessdata in Resources */,
 				3F53DB721BD5261400EEFF85 /* Assets.xcassets in Resources */,
 				3F53DB6D1BD5261400EEFF85 /* Main.storyboard in Resources */,
 			);
@@ -453,18 +509,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F9436161BDE653500C83121 /* ShoppingCart+CoreDataProperties.swift in Sources */,
-				3F195CCE1BDA4A0900CF7026 /* ShoppingCartTableViewCell.swift in Sources */,
+				0B62EC731BE05EDF00481FD7 /* AppDelegate.swift in Sources */,
+				0B62EC811BE05F3200481FD7 /* ShoppingCart+CoreDataProperties.swift in Sources */,
+				0B62EC9C1BE083A700481FD7 /* MainTabBarController.swift in Sources */,
+				0B62EC951BE06D0C00481FD7 /* SaveThePiggyApperance.swift in Sources */,
+				0B62EC791BE05F1700481FD7 /* ShoppingCartTableViewController.swift in Sources */,
+				0B62EC711BE05ED600481FD7 /* DataGenerator.swift in Sources */,
+				0B62ECAB1BE0883800481FD7 /* UIController+OrientationSupport.swift in Sources */,
+				0B62EC831BE05F3200481FD7 /* ShoppingCartItem+CoreDataProperties.swift in Sources */,
+				0B62EC771BE05F1000481FD7 /* AddProductViewController.swift in Sources */,
+				0B62EC981BE0714300481FD7 /* UIColor+Hex.swift in Sources */,
 				3F53DB701BD5261400EEFF85 /* appollo_ios.xcdatamodeld in Sources */,
-				3F9436151BDE653500C83121 /* ShoppingCartItem.swift in Sources */,
-				3F195CD01BDA6DA100CF7026 /* AddProductViewController.swift in Sources */,
-				3F195CC91BDA44C600CF7026 /* CartItem.swift in Sources */,
-				3F53DB681BD5261400EEFF85 /* AppDelegate.swift in Sources */,
-				3F9436171BDE653500C83121 /* ShoppingCart.swift in Sources */,
-				3F195CCB1BDA44D500CF7026 /* ShoppingCart2.swift in Sources */,
-				3F8880521BD66BCD00586E04 /* ScannerViewController.swift in Sources */,
-				3F9436141BDE653500C83121 /* ShoppingCartItem+CoreDataProperties.swift in Sources */,
-				3F195CC61BDA448700CF7026 /* ShoppingCartTableViewController.swift in Sources */,
+				0B62EC751BE05EEB00481FD7 /* ScannerViewController.swift in Sources */,
+				0B62EC6B1BE05DBD00481FD7 /* SwiftRecord.swift in Sources */,
+				0B62EC821BE05F3200481FD7 /* ShoppingCartItem.swift in Sources */,
+				0B62EC801BE05F3200481FD7 /* ShoppingCart.swift in Sources */,
+				0B62EC7B1BE05F2000481FD7 /* ShoppingCartTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +569,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3F53DB6C1BD5261400EEFF85 /* Base */,
+				0B62ECAE1BE09E2600481FD7 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -517,6 +578,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3F53DB741BD5261400EEFF85 /* Base */,
+				0B62ECAF1BE09E2600481FD7 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -614,6 +676,7 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vendor",
@@ -636,6 +699,7 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vendor",

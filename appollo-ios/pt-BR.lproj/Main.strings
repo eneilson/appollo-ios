@@ -1,0 +1,63 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2rt-jL-uGR"; */
+"2rt-jL-uGR.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Escanear Etiqueta"; ObjectID = "38x-ke-IGT"; */
+"38x-ke-IGT.normalTitle" = "Escanear Etiqueta";
+
+/* Class = "UINavigationItem"; title = "Adicionar produto"; ObjectID = "3nM-ys-5SX"; */
+"3nM-ys-5SX.title" = "Adicionar produto";
+
+/* Class = "UILabel"; text = "Toque para inserir imagem"; ObjectID = "5NB-r1-duN"; */
+"5NB-r1-duN.text" = "Toque para inserir imagem";
+
+/* Class = "UINavigationItem"; title = "History"; ObjectID = "5fd-3I-Hde"; */
+"5fd-3I-Hde.title" = "History";
+
+/* Class = "UITabBarItem"; title = "Carrinho"; ObjectID = "Bfl-ab-L7p"; */
+"Bfl-ab-L7p.title" = "Carrinho";
+
+/* Class = "UITextField"; placeholder = "Nome do produto"; ObjectID = "Mra-nD-heg"; */
+"Mra-nD-heg.placeholder" = "Nome do produto";
+
+/* Class = "UITabBarItem"; title = "Histórico"; ObjectID = "OeR-7t-Wqd"; */
+"OeR-7t-Wqd.title" = "Histórico";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Xoh-b5-YnC"; */
+"Xoh-b5-YnC.text" = "Label";
+
+/* Class = "UILabel"; text = "Produto"; ObjectID = "XpU-pG-zoi"; */
+"XpU-pG-zoi.text" = "Produto";
+
+/* Class = "UITextField"; placeholder = "fdfdfdfd"; ObjectID = "foh-zF-bqF"; */
+"foh-zF-bqF.placeholder" = "fdfdfdfd";
+
+/* Class = "UINavigationItem"; title = "Current"; ObjectID = "gzO-dm-Pzv"; */
+"gzO-dm-Pzv.title" = "Current";
+
+/* Class = "UILabel"; text = "Para utilizar o leitor no campo, toque na imagem ao lado"; ObjectID = "hGr-Qj-aVb"; */
+"hGr-Qj-aVb.text" = "Para utilizar o leitor no campo, toque na imagem ao lado";
+
+/* Class = "UITextField"; placeholder = "Preço unitário"; ObjectID = "hHH-b7-tL6"; */
+"hHH-b7-tL6.placeholder" = "Preço unitário";
+
+/* Class = "UITextField"; placeholder = "Quantidade"; ObjectID = "iIN-py-vRs"; */
+"iIN-py-vRs.placeholder" = "Quantidade";
+
+/* Class = "UITextField"; text = "1"; ObjectID = "iIN-py-vRs"; */
+"iIN-py-vRs.text" = "1";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mus-wR-Omz"; */
+"mus-wR-Omz.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "u0B-eX-N6f"; */
+"u0B-eX-N6f.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vk9-lx-cLN"; */
+"vk9-lx-cLN.text" = "Label";
+
+/* Class = "UILabel"; text = "Preco"; ObjectID = "xq6-Wr-obs"; */
+"xq6-Wr-obs.text" = "Preco";
+
+/* Class = "UIButton"; normalTitle = "Here comes the camera view"; ObjectID = "yYS-Vp-ybF"; */
+"yYS-Vp-ybF.normalTitle" = "Here comes the camera view";
