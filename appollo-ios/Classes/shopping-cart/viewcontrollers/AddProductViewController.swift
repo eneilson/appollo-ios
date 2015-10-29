@@ -38,6 +38,13 @@ class AddProductViewController: UITableViewController, UINavigationControllerDel
 
         saveButton.enabled = false
     }
+    
+    @IBAction func quantidadeEditingEnd(sender: AnyObject) {
+        if (quantidadeTextView.text!.characters.count == 0) {
+            quantidadeTextView.text = "1"
+        }
+        quantidadeStepper.value = Double(quantidadeTextView.text!)!
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

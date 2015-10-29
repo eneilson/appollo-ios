@@ -25,11 +25,57 @@ class ShoppingCartTableViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         if !readOnly {
-            let openedCarts = ShoppingCart.query(["closed": 0]) as! [ShoppingCart]
-            shoppingCart = openedCarts[0]
+            fetchOpenedCart()
             self.tableView.reloadData()
         }
         self.updateTotalTitle()
+    }
+    
+    @IBAction func actionButtonTouch(sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        alert.addAction(UIAlertAction(title: "Checkout cart", style: UIAlertActionStyle.Default, handler: { (action) in
+            self.checkoutCart()
+        }))
+        alert.addAction(UIAlertAction(title: "Clear products", style: UIAlertActionStyle.Destructive, handler: { (action) in
+            for item in self.shoppingCart.items!.array as! [ShoppingCartItem] {
+                item.delete()
+                item.save()
+            }
+            self.shoppingCart.items = NSOrderedSet()
+            self.shoppingCart.save()
+            self.updateTotalTitle()
+            self.tableView.reloadData()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func checkoutCart() {
+        let alert = UIAlertController(title: "Where are you?", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addTextFieldWithConfigurationHandler({ (textField: UITextField) in
+            textField.placeholder = "Supermarket name"
+        })
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) in
+            let textField = alert.textFields![0]
+            self.shoppingCart.local = textField.text
+            self.shoppingCart.closed = 1
+            self.shoppingCart.dateCreated = NSDate()
+            self.shoppingCart.save()
+            self.fetchOpenedCart()
+            self.updateTotalTitle()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func fetchOpenedCart() {
+        let openedCarts = ShoppingCart.query(["closed": 0]) as! [ShoppingCart]
+        if openedCarts.count > 0 {
+            shoppingCart = openedCarts[0]
+        } else {
+            shoppingCart = ShoppingCart.create() as! ShoppingCart
+        }
+        self.tableView.reloadData()
     }
     
     func updateTotalTitle() {
@@ -43,14 +89,36 @@ class ShoppingCartTableViewController: UITableViewController {
         // print("Total: \(total) - formatted: \(totalFormatted)")
         
         totalSum.text = totalFormatted
-        totalCountProducts.text = "\(shoppingCart.items!.count) products"
+        totalCountProducts.text = {
+            switch (shoppingCart.items!.count) {
+                case 0: return "No products"
+                case 1: return "\(shoppingCart.items!.count) product"
+                default: return "\(shoppingCart.items!.count) products"
+            }
+        }()
         
-        self.navigationItem.title = totalFormatted
+        if readOnly {
+            let formatter = NSDateFormatter()
+            formatter.dateStyle = NSDateFormatterStyle.ShortStyle
+            formatter.timeStyle = NSDateFormatterStyle.ShortStyle
+            formatter.locale = NSLocale(localeIdentifier: "pt_BR")
+            self.navigationItem.title = formatter.stringFromDate(shoppingCart.dateCreated)
+        } else {
+            if let btn = self.navigationItem.leftBarButtonItem {
+                btn.enabled = (shoppingCart.items!.count == 0 ? false : true)
+            }
+            self.navigationItem.title = totalFormatted
+        }
+        
     }
 
     func configure(cart: ShoppingCart, readOnly: Bool = false) {
         self.shoppingCart = cart
         self.readOnly = readOnly
+        if readOnly {
+            self.navigationItem.leftBarButtonItem = nil
+            self.navigationItem.rightBarButtonItem = nil
+        }
     }
     
     override func didReceiveMemoryWarning() {

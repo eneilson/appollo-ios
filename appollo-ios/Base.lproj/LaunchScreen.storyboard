@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="save-the-piggy" translatesAutoresizingMaskIntoConstraints="NO" id="RT4-Lm-BMz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="save-the-piggy" translatesAutoresizingMaskIntoConstraints="NO" id="RT4-Lm-BMz">
                                 <rect key="frame" x="60" y="228" width="480" height="143"/>
                                 <animations/>
                                 <constraints>

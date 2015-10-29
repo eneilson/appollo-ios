@@ -218,7 +218,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Current" id="gzO-dm-Pzv">
-                        <barButtonItem key="leftBarButtonItem" image="Clear Shopping Cart" id="i1X-FM-kpz"/>
+                        <barButtonItem key="leftBarButtonItem" image="Clear Shopping Cart" id="i1X-FM-kpz">
+                            <connections>
+                                <action selector="actionButtonTouch:" destination="Mrs-hd-jko" id="1L2-N0-LDs"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="F0g-y7-45d">
                             <connections>
                                 <segue destination="yuU-uE-9K6" kind="show" id="rio-rH-X0V"/>
@@ -330,15 +334,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" placeholder="Quantidade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iIN-py-vRs">
-                                                    <rect key="frame" x="18" y="8" width="460" height="33.5"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                                    <connections>
-                                                        <action selector="fieldsEditingChanged:" destination="yuU-uE-9K6" eventType="editingChanged" id="q3R-wr-pcK"/>
-                                                    </connections>
-                                                </textField>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="egD-b8-JmC">
                                                     <rect key="frame" x="488" y="8" width="94" height="29"/>
                                                     <animations/>
@@ -349,6 +344,16 @@
                                                         <action selector="stepperValueChanged:" destination="yuU-uE-9K6" eventType="valueChanged" id="NhB-6y-C34"/>
                                                     </connections>
                                                 </stepper>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" placeholder="Quantidade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iIN-py-vRs">
+                                                    <rect key="frame" x="20" y="7" width="460" height="33.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    <connections>
+                                                        <action selector="fieldsEditingChanged:" destination="yuU-uE-9K6" eventType="editingChanged" id="q3R-wr-pcK"/>
+                                                        <action selector="quantidadeEditingEnd:" destination="yuU-uE-9K6" eventType="editingDidEnd" id="igy-NY-Lek"/>
+                                                    </connections>
+                                                </textField>
                                             </subviews>
                                             <animations/>
                                             <constraints>
