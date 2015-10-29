@@ -26,7 +26,11 @@ class ShoppingCartTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         if !readOnly {
             let openedCarts = ShoppingCart.query(["closed": 0]) as! [ShoppingCart]
-            shoppingCart = openedCarts[0]
+			if (openedCarts.count > 0) {
+				shoppingCart = openedCarts[0]
+			} else {
+				shoppingCart = ShoppingCart.create() as! ShoppingCart
+			}
             self.tableView.reloadData()
         }
         self.updateTotalTitle()

@@ -27,7 +27,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
-        if !(viewController is ScannerViewController) {
+        if !(viewController is ScannerBarCodeViewController) {
             button.userInteractionEnabled = true
             button.highlighted = false
             button.selected = false

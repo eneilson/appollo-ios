@@ -12,7 +12,7 @@ import TesseractOCR
 
 private let language = "eng"
 
-class ScannerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, G8TesseractDelegate {
+class ScannerViewControllerPOC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, G8TesseractDelegate {
     
     @IBOutlet weak var productView: UILabel!
     @IBOutlet weak var priceView: UILabel!
