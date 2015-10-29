@@ -4,7 +4,7 @@
         <attribute name="closed" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="dateCreated" attributeType="Date" syncable="YES"/>
         <attribute name="local" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ShoppingCartItem" inverseName="cart" inverseEntity="ShoppingCartItem" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="ShoppingCartItem" inverseName="cart" inverseEntity="ShoppingCartItem" syncable="YES"/>
     </entity>
     <entity name="ShoppingCartItem" representedClassName="ShoppingCartItem" syncable="YES">
         <attribute name="automatic" attributeType="Boolean" syncable="YES"/>

@@ -13,6 +13,7 @@ class ShoppingCartTableViewController: UITableViewController {
     @IBOutlet var totalCountProducts: UILabel!
     @IBOutlet var totalSum: UILabel!
     
+    var readOnly: Bool = false
     var shoppingCart: ShoppingCart!
     var shoppingCartItem: ShoppingCartItem!
     
@@ -23,11 +24,12 @@ class ShoppingCartTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        let carts = ShoppingCart.all() as! [ShoppingCart]
-        shoppingCart = carts[0]
-        
+        if !readOnly {
+            let openedCarts = ShoppingCart.query(["closed": 0]) as! [ShoppingCart]
+            shoppingCart = openedCarts[0]
+            self.tableView.reloadData()
+        }
         self.updateTotalTitle()
-        self.tableView.reloadData()
     }
     
     func updateTotalTitle() {
@@ -46,6 +48,11 @@ class ShoppingCartTableViewController: UITableViewController {
         self.navigationItem.title = totalFormatted
     }
 
+    func configure(cart: ShoppingCart, readOnly: Bool = false) {
+        self.shoppingCart = cart
+        self.readOnly = readOnly
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

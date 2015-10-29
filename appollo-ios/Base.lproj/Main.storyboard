@@ -232,7 +232,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yKj-85-IaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736" y="1047"/>
+            <point key="canvasLocation" x="2444" y="1067"/>
         </scene>
         <!--New Item-->
         <scene sceneID="q3n-Yp-wBw">
@@ -474,7 +474,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2530" y="1047"/>
+            <point key="canvasLocation" x="3214" y="1067"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="9dB-bq-qEy">
@@ -560,6 +560,7 @@
                                 <connections>
                                     <outlet property="date" destination="9Sx-RM-f5O" id="coO-k8-Ozp"/>
                                     <outlet property="place" destination="UsB-2n-cTK" id="RAL-Hb-7Jb"/>
+                                    <segue destination="Mrs-hd-jko" kind="show" id="Bjk-pH-hZs"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -636,4 +637,7 @@
         <image name="Shopping Cart Loaded" width="25" height="25"/>
         <image name="Shopping Cart Loaded Filled" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Bjk-pH-hZs"/>
+    </inferredMetricsTieBreakers>
 </document>

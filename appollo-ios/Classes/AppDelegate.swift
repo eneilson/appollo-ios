@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SwiftRecord.generateRelationships = true
         CoreDataManager.sharedManager.modelName = "appollo_ios"
 
-        DataGenerator.generate(false)
+        //DataGenerator.generate(false)
         
         SaveThePiggyApperance.apply()
         
