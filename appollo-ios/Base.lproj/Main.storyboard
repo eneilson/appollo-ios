@@ -542,14 +542,14 @@
                                             <rect key="frame" x="8" y="14" width="41" height="20.5"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sx-RM-f5O">
                                             <rect key="frame" x="556" y="14.5" width="36" height="20.5"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -580,10 +580,29 @@
             </objects>
             <point key="canvasLocation" x="1736" y="1797"/>
         </scene>
-        <!--View Controller-->
+        <!--Scanner Bar Code View Controller-->
+        <scene sceneID="hAM-72-Xgd">
+            <objects>
+                <viewController storyboardIdentifier="ScannerBarCodeViewController" id="LX0-2z-XI9" customClass="ScannerBarCodeViewController" customModule="appollo_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dDJ-s9-bzL"/>
+                        <viewControllerLayoutGuide type="bottom" id="zcT-vp-8y6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qLy-az-AC0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wCs-Zn-tHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-461" y="2127"/>
+        </scene>
+        <!--Scanner View Controller-->
         <scene sceneID="SqD-F5-Nre">
             <objects>
-                <viewController id="AeR-ga-qZS" sceneMemberID="viewController">
+                <viewController id="AeR-ga-qZS" customClass="ScannerViewController" customModule="appollo_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="10v-pW-yf3"/>
                         <viewControllerLayoutGuide type="bottom" id="owj-nG-DUo"/>
@@ -592,20 +611,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYS-Vp-ybF">
-                                <rect key="frame" x="201" y="285" width="199" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[bar code]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMg-fZ-KX5">
+                                <rect key="frame" x="260.5" y="290" width="79.5" height="20.5"/>
                                 <animations/>
-                                <state key="normal" title="Here comes the camera view"/>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yYS-Vp-ybF" firstAttribute="centerX" secondItem="5Vo-oM-Tv4" secondAttribute="centerX" id="4VF-u3-GIG"/>
-                            <constraint firstItem="yYS-Vp-ybF" firstAttribute="centerY" secondItem="5Vo-oM-Tv4" secondAttribute="centerY" id="RQx-rL-1fD"/>
+                            <constraint firstItem="cMg-fZ-KX5" firstAttribute="centerX" secondItem="5Vo-oM-Tv4" secondAttribute="centerX" id="KPX-zs-ap7"/>
+                            <constraint firstItem="cMg-fZ-KX5" firstAttribute="centerY" secondItem="5Vo-oM-Tv4" secondAttribute="centerY" id="r0S-B9-3Sv"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="HUQ-CM-LGd"/>
+                    <connections>
+                        <outlet property="barCodeView" destination="cMg-fZ-KX5" id="tMS-WE-7fg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFK-CG-fm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

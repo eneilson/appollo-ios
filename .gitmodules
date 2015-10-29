@@ -2,3 +2,6 @@
 	path = vendor/Tesseract-OCR-iOS
 	url = https://github.com/gali8/Tesseract-OCR-iOS.git
 	ignore = dirty
+[submodule "vendor/GPUImage"]
+	path = vendor/GPUImage
+	url = https://github.com/BradLarson/GPUImage.git
