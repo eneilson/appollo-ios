@@ -23,6 +23,11 @@
 		0B62EC981BE0714300481FD7 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62EC971BE0714300481FD7 /* UIColor+Hex.swift */; };
 		0B62EC9C1BE083A700481FD7 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62EC9B1BE083A700481FD7 /* MainTabBarController.swift */; };
 		0B62ECAB1BE0883800481FD7 /* UIController+OrientationSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62ECAA1BE0883800481FD7 /* UIController+OrientationSupport.swift */; };
+		0B81B2AF1BE26CF9001894EB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B81B2AD1BE26CF9001894EB /* CoreMedia.framework */; };
+		0B81B2B01BE26CF9001894EB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B81B2AE1BE26CF9001894EB /* CoreVideo.framework */; };
+		0B81B2B41BE26D04001894EB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B81B2B31BE26D04001894EB /* OpenGLES.framework */; };
+		0B81B2B61BE26D0B001894EB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B81B2B51BE26D0B001894EB /* AVFoundation.framework */; };
+		0B81B2B81BE26D14001894EB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B81B2B71BE26D14001894EB /* QuartzCore.framework */; };
 		0BDAB4CE1BD6955800915058 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDAB4CD1BD6955800915058 /* libz.tbd */; };
 		3F53DB6D1BD5261400EEFF85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F53DB6B1BD5261400EEFF85 /* Main.storyboard */; };
 		3F53DB701BD5261400EEFF85 /* appollo_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB6E1BD5261400EEFF85 /* appollo_ios.xcdatamodeld */; };
@@ -59,7 +64,7 @@
 		3F89740E1BE249C800E5A1D4 /* ScannerBarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89740D1BE249C800E5A1D4 /* ScannerBarCodeViewController.swift */; };
 		3F8974101BE24BE300E5A1D4 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89740F1BE24BE300E5A1D4 /* ScannerViewController.swift */; };
 		3F8974121BE2531500E5A1D4 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8974111BE2531500E5A1D4 /* UIImage+Resize.swift */; };
-		3F8974141BE258BB00E5A1D4 /* PriceTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8974131BE258BB00E5A1D4 /* PriceTagViewController.swift */; };
+		3F8974141BE258BB00E5A1D4 /* ScannerPriceTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8974131BE258BB00E5A1D4 /* ScannerPriceTagViewController.swift */; };
 		3F8974331BE2596C00E5A1D4 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8974321BE2595100E5A1D4 /* GPUImage.framework */; };
 		3F8974341BE2596C00E5A1D4 /* GPUImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8974321BE2595100E5A1D4 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3FFD5DCB1BE105D000C0DB2B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD5DCA1BE105D000C0DB2B /* HistoryViewController.swift */; };
@@ -152,6 +157,11 @@
 		0B62ECAA1BE0883800481FD7 /* UIController+OrientationSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIController+OrientationSupport.swift"; path = "Classes/extensions/UIController+OrientationSupport.swift"; sourceTree = "<group>"; };
 		0B62ECAE1BE09E2600481FD7 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		0B62ECAF1BE09E2600481FD7 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		0B81B2AD1BE26CF9001894EB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0B81B2AE1BE26CF9001894EB /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		0B81B2B31BE26D04001894EB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		0B81B2B51BE26D0B001894EB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0B81B2B71BE26D14001894EB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0BDAB4CD1BD6955800915058 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		3F53DB641BD5261400EEFF85 /* appollo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "appollo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F53DB6C1BD5261400EEFF85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -193,7 +203,7 @@
 		3F89740D1BE249C800E5A1D4 /* ScannerBarCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerBarCodeViewController.swift; path = scanner/viewcontrollers/ScannerBarCodeViewController.swift; sourceTree = "<group>"; };
 		3F89740F1BE24BE300E5A1D4 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerViewController.swift; path = scanner/viewcontrollers/ScannerViewController.swift; sourceTree = "<group>"; };
 		3F8974111BE2531500E5A1D4 /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Resize.swift"; path = "Classes/extensions/UIImage+Resize.swift"; sourceTree = "<group>"; };
-		3F8974131BE258BB00E5A1D4 /* PriceTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PriceTagViewController.swift; path = scanner/viewcontrollers/PriceTagViewController.swift; sourceTree = "<group>"; };
+		3F8974131BE258BB00E5A1D4 /* ScannerPriceTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerPriceTagViewController.swift; path = scanner/viewcontrollers/ScannerPriceTagViewController.swift; sourceTree = "<group>"; };
 		3F8974291BE2595000E5A1D4 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "vendor/Tesseract-OCR-iOS/../GPUImage/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
 		3F9806281BD666B9000A51EF /* appollo-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "appollo-ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		3FFD5DCA1BE105D000C0DB2B /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = Classes/tabs/controllers/HistoryViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +217,11 @@
 			files = (
 				0BDAB4CE1BD6955800915058 /* libz.tbd in Frameworks */,
 				3F8880541BD674CE00586E04 /* libstdc++.6.0.9.tbd in Frameworks */,
+				0B81B2B81BE26D14001894EB /* QuartzCore.framework in Frameworks */,
+				0B81B2B61BE26D0B001894EB /* AVFoundation.framework in Frameworks */,
+				0B81B2B41BE26D04001894EB /* OpenGLES.framework in Frameworks */,
+				0B81B2AF1BE26CF9001894EB /* CoreMedia.framework in Frameworks */,
+				0B81B2B01BE26CF9001894EB /* CoreVideo.framework in Frameworks */,
 				3F88804D1BD66AD700586E04 /* CoreFoundation.framework in Frameworks */,
 				3F88804A1BD66AA900586E04 /* Foundation.framework in Frameworks */,
 				3F8880481BD66A9A00586E04 /* UIKit.framework in Frameworks */,
@@ -395,6 +410,11 @@
 		3F88804B1BD66ABB00586E04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B81B2B71BE26D14001894EB /* QuartzCore.framework */,
+				0B81B2B51BE26D0B001894EB /* AVFoundation.framework */,
+				0B81B2B31BE26D04001894EB /* OpenGLES.framework */,
+				0B81B2AD1BE26CF9001894EB /* CoreMedia.framework */,
+				0B81B2AE1BE26CF9001894EB /* CoreVideo.framework */,
 				0BDAB4CD1BD6955800915058 /* libz.tbd */,
 				3F8880531BD674CE00586E04 /* libstdc++.6.0.9.tbd */,
 				3F88804C1BD66AD700586E04 /* CoreFoundation.framework */,
@@ -420,7 +440,7 @@
 				0B62EC741BE05EEB00481FD7 /* ScannerViewControllerPOC.swift */,
 				3F89740D1BE249C800E5A1D4 /* ScannerBarCodeViewController.swift */,
 				3F89740F1BE24BE300E5A1D4 /* ScannerViewController.swift */,
-				3F8974131BE258BB00E5A1D4 /* PriceTagViewController.swift */,
+				3F8974131BE258BB00E5A1D4 /* ScannerPriceTagViewController.swift */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -550,7 +570,7 @@
 				TargetAttributes = {
 					3F53DB631BD5261400EEFF85 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = P525YXXD7U;
+						DevelopmentTeam = Y7K5S2P7F6;
 					};
 					3F53DB7A1BD5261500EEFF85 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -663,7 +683,7 @@
 				3F8974091BE2497300E5A1D4 /* RSUnifiedCodeGenerator.swift in Sources */,
 				0B62EC951BE06D0C00481FD7 /* SaveThePiggyApperance.swift in Sources */,
 				0B62EC791BE05F1700481FD7 /* ShoppingCartTableViewController.swift in Sources */,
-				3F8974141BE258BB00E5A1D4 /* PriceTagViewController.swift in Sources */,
+				3F8974141BE258BB00E5A1D4 /* ScannerPriceTagViewController.swift in Sources */,
 				3F89740E1BE249C800E5A1D4 /* ScannerBarCodeViewController.swift in Sources */,
 				0B62EC711BE05ED600481FD7 /* DataGenerator.swift in Sources */,
 				0B62ECAB1BE0883800481FD7 /* UIController+OrientationSupport.swift in Sources */,

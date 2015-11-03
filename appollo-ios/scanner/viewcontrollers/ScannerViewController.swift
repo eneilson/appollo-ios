@@ -16,21 +16,24 @@ class ScannerViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-		let barCodeScanner = (self.storyboard?.instantiateViewControllerWithIdentifier("ScannerBarCodeViewController")) as! ScannerBarCodeViewController
-
-		barCodeScanner.tapHandler = { point in
-			print(point)
-		}
-		
-		barCodeScanner.barcodesHandler = { barcodes in
-			for barcode in barcodes {
-				print("Barcode found: type=" + barcode.type + " value=" + barcode.stringValue)
-				self.barCodeView.text = barcode.stringValue
-				barCodeScanner.dismissViewControllerAnimated(true, completion: nil)
-			}
-		}
-		
-		self.presentViewController(barCodeScanner, animated: true, completion: nil)
+//		let barCodeScanner = (self.storyboard?.instantiateViewControllerWithIdentifier("ScannerBarCodeViewController")) as! ScannerBarCodeViewController
+//
+//		barCodeScanner.tapHandler = { point in
+//			print(point)
+//		}
+//		
+//		barCodeScanner.barcodesHandler = { barcodes in
+//			for barcode in barcodes {
+//				print("Barcode found: type=" + barcode.type + " value=" + barcode.stringValue)
+//				self.barCodeView.text = barcode.stringValue
+//				barCodeScanner.dismissViewControllerAnimated(true, completion: nil)
+//			}
+//		}
+//		
+//		self.presentViewController(barCodeScanner, animated: true, completion: nil)
+        
+        let barCodeScanner = (self.storyboard?.instantiateViewControllerWithIdentifier("ScannerPriceTagViewController")) as! ScannerPriceTagViewController
+        self.presentViewController(barCodeScanner, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

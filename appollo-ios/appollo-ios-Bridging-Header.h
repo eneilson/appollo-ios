@@ -4,4 +4,4 @@
 
 #import <TesseractOCR/TesseractOCR.h>
 
-#import <GPUImage/GPUImage.h>
+// #import <GPUimage/GPUImage.h>

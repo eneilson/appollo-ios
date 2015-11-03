@@ -11,7 +11,7 @@ import UIKit
 import TesseractOCR
 import GPUImage
 
-public class PriceTagViewController: UIViewController {
+public class ScannerPriceTagViewController: UIViewController {
 	
 	// printa no console o que esta acontecendo
 	public var debug = false
@@ -80,8 +80,8 @@ public class PriceTagViewController: UIViewController {
 		// Filter settings
 		exposure.exposure = 0.8 // -10 - 10
 		highlightShadow.highlights  = 0.7 // 0 - 1
-		saturation.saturation  = 0.3 // 0 - 2
-		contrast.contrast = 3.0  // 0 - 4
+		saturation.saturation  = 0.8 // 0 - 2
+		contrast.contrast = 4.0  // 0 - 4
 		adaptiveTreshold.blurRadiusInPixels = 8.0
 		
 		// Only use this area for the OCR
@@ -101,11 +101,12 @@ public class PriceTagViewController: UIViewController {
 		}
 		
 		// Chaining the filters
-		videoCamera.addTarget(exposure)
-		exposure.addTarget(highlightShadow)
-		highlightShadow.addTarget(saturation)
-		saturation.addTarget(contrast)
-		contrast.addTarget(self.filterView)
+		videoCamera.addTarget(highlightShadow)
+		//exposure.addTarget(highlightShadow)
+		highlightShadow.addTarget(contrast)
+		//saturation.addTarget(contrast)
+		//contrast.addTarget(self.filterView)
+        contrast.addTarget(self.filterView)
 		
 		// Strange! Adding this filter will give a great readable picture, but the OCR won't work.
 		// contrast.addTarget(adaptiveTreshold)
@@ -116,6 +117,8 @@ public class PriceTagViewController: UIViewController {
 		crop.addTarget(averageColor)
 		
 		self.view.backgroundColor = UIColor.whiteColor()
+        
+        self.StartScan(self)
 	}
 	
 	/**
@@ -127,7 +130,7 @@ public class PriceTagViewController: UIViewController {
 		self.view.backgroundColor = UIColor.blackColor()
 		
 		self.videoCamera.startCameraCapture()
-		self.timer = NSTimer.scheduledTimerWithTimeInterval(0.02, target: self, selector: Selector("scan"), userInfo: nil, repeats: false)
+		self.timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("scan"), userInfo: nil, repeats: false)
 	}
 	
 	/**
@@ -169,8 +172,9 @@ public class PriceTagViewController: UIViewController {
 			
 			autoreleasepool {
 				// Crop scan area
-				let cropRect:CGRect! = CGRect(x: 350,y: 110,width: 350, height: 1700)
-				let imageRef:CGImageRef! = CGImageCreateWithImageInRect(snapshot.CGImage, cropRect);
+//				let cropRect:CGRect! = CGRect(x: 350,y: 110,width: 350, height: 1700)
+//				let imageRef:CGImageRef! = CGImageCreateWithImageInRect(snapshot.CGImage, cropRect);
+                let imageRef = snapshot.CGImage!
 				//let croppedImage:UIImage = UIImage(CGImage: imageRef)
 				
 				// Four times faster scan speed when the image is smaller. Another bennefit is that the OCR results are better at this resolution
@@ -188,8 +192,8 @@ public class PriceTagViewController: UIViewController {
 				// ocr traineddata ripped from:
 				// http://getandroidapp.org/applications/business/79952-nfc-passport-reader-2-0-8.html
 				// see http://www.sk-spell.sk.cx/tesseract-ocr-en-variables
-				self.tesseract.setVariableValue("0123456789$.,", forKey: "tessedit_char_whitelist");
-				self.tesseract.setVariableValue("FALSE", forKey: "x_ht_quality_check")
+				//self.tesseract.setVariableValue("0123456789$.,", forKey: "tessedit_char_whitelist");
+				//self.tesseract.setVariableValue("FALSE", forKey: "x_ht_quality_check")
 				
 				//Testing OCR optimisations
 				//                self.tesseract.setVariableValue("FALSE", forKey: "load_system_dawg")
@@ -201,7 +205,7 @@ public class PriceTagViewController: UIViewController {
 				//                self.tesseract.setVariableValue("FALSE", forKey: "load_bigram_dawg")
 				//                self.tesseract.setVariableValue("FALSE", forKey: "wordrec_enable_assoc")
 				
-				self.tesseract.image = image
+				self.tesseract.image = image.g8_blackAndWhite()
 				print("- Start recognize")
 				self.tesseract.recognize()
 				result = self.tesseract.recognizedText
@@ -214,8 +218,8 @@ public class PriceTagViewController: UIViewController {
 			// Perform OCR
 			if let r = result {
 				
-				if r.isNumeric() {
-				//	print("Scan quality insufficient : \(mrz.isValid)")
+				if r == "" || !r.isNumeric() {
+					print("Scan quality insufficient : \(r)")
 				} else {
 					self.videoCamera.stopCameraCapture()
 					self.succesfullScan(r)
