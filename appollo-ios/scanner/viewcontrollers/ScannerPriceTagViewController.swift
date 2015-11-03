@@ -22,6 +22,7 @@ public class ScannerPriceTagViewController: UIViewController {
 	// view que ira conter a imagem com os filtros aplicados
 	@IBOutlet var filterView: GPUImageView!
 	
+	@IBOutlet weak var finalImageView: UIImageView!
 	// timer para tentativa de leitura da tag de preco
 	var timer: NSTimer?
 	
@@ -50,6 +51,8 @@ public class ScannerPriceTagViewController: UIViewController {
 	public required init?(coder aDecoder: NSCoder) {
 		videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSessionPreset1920x1080, cameraPosition: .Back)
 		videoCamera.outputImageOrientation = .Portrait;
+		
+		tesseract.engineMode = .TesseractCubeCombined
 		super.init(coder: aDecoder)
 	}
 	
@@ -85,7 +88,7 @@ public class ScannerPriceTagViewController: UIViewController {
 		adaptiveTreshold.blurRadiusInPixels = 8.0
 		
 		// Only use this area for the OCR
-		crop.cropRegion = CGRectMake(350.0/1080.0, 110.0/1920.0, 350.0/1080, 1700.0/1920.0)
+		//crop.cropRegion = CGRectMake(350.0/1080.0, 110.0/1920.0, 350.0/1080, 1700.0/1920.0)
 		
 		// Try to dinamically optimize the exposure based on the average color
 		averageColor.colorAverageProcessingFinishedBlock = {(redComponent, greenComponent, blueComponent, alphaComponent, frameTime) in
@@ -101,9 +104,9 @@ public class ScannerPriceTagViewController: UIViewController {
 		}
 		
 		// Chaining the filters
-		videoCamera.addTarget(highlightShadow)
+		videoCamera.addTarget(contrast)
 		//exposure.addTarget(highlightShadow)
-		highlightShadow.addTarget(contrast)
+		//highlightShadow.addTarget(contrast)
 		//saturation.addTarget(contrast)
 		//contrast.addTarget(self.filterView)
         contrast.addTarget(self.filterView)
@@ -113,8 +116,9 @@ public class ScannerPriceTagViewController: UIViewController {
 		// adaptiveTreshold.addTarget(self.filterView)
 		
 		// Adding these 2 extra filters to automatically control exposure depending of the average color in the scan area
-		contrast.addTarget(crop)
-		crop.addTarget(averageColor)
+		//contrast.addTarget(crop)
+		//crop.addTarget(averageColor)
+		contrast.addTarget(averageColor)
 		
 		self.view.backgroundColor = UIColor.whiteColor()
         
@@ -175,37 +179,53 @@ public class ScannerPriceTagViewController: UIViewController {
 //				let cropRect:CGRect! = CGRect(x: 350,y: 110,width: 350, height: 1700)
 //				let imageRef:CGImageRef! = CGImageCreateWithImageInRect(snapshot.CGImage, cropRect);
                 let imageRef = snapshot.CGImage!
-				//let croppedImage:UIImage = UIImage(CGImage: imageRef)
+//				let croppedImage:UIImage = UIImage(CGImage: imageRef)
 				
 				// Four times faster scan speed when the image is smaller. Another bennefit is that the OCR results are better at this resolution
-				let croppedImage:UIImage =   UIImage(CGImage: imageRef).resizedImageToFitInSize(CGSize(width: 350 * 0.5 , height: 1700 * 0.5 ), scaleIfSmaller: true)
+				let croppedImage:UIImage = UIImage(CGImage: imageRef) // UIImage(CGImage: imageRef).resizedImageToFitInSize(CGSize(width: 350 * 0.5 , height: 1700 * 0.5 ), scaleIfSmaller: true)
 				
 				
 				// Rotate cropped image
 				let selectedFilter = GPUImageTransformFilter()
-				selectedFilter.setInputRotation(kGPUImageRotateLeft, atIndex: 0)
+				selectedFilter.setInputRotation(kGPUImageRotateRight, atIndex: 0)
 				let image:UIImage = selectedFilter.imageByFilteringImage(croppedImage)
 				
 				// Start OCR
 				// download traineddata to tessdata folder for language from:
 				// https://code.google.com/p/tesseract-ocr/downloads/list
-				// ocr traineddata ripped from:
-				// http://getandroidapp.org/applications/business/79952-nfc-passport-reader-2-0-8.html
-				// see http://www.sk-spell.sk.cx/tesseract-ocr-en-variables
-				//self.tesseract.setVariableValue("0123456789$.,", forKey: "tessedit_char_whitelist");
-				//self.tesseract.setVariableValue("FALSE", forKey: "x_ht_quality_check")
+//				self.tesseract.setVariableValue("0123456789$.,", forKey: "tessedit_char_whitelist");
+//				self.tesseract.setVariableValue("FALSE", forKey: "x_ht_quality_check")
+//				self.tesseract.setVariableValue("\(G8PageSegmentationMode.SingleChar)", forKey: kG8ParamTesseditPagesegMode)
 				
 				//Testing OCR optimisations
-				//                self.tesseract.setVariableValue("FALSE", forKey: "load_system_dawg")
-				//                self.tesseract.setVariableValue("FALSE", forKey: "load_freq_dawg")
-				//                self.tesseract.setVariableValue("FALSE", forKey: "load_unambig_dawg")
-				//                self.tesseract.setVariableValue("FALSE", forKey: "load_punc_dawg")
-				//                self.tesseract.setVariableValue("FALSE", forKey: "load_number_dawg")
-				//                self.tesseract.setVariableValue("FALSE", forKey: "load_fixed_length_dawgs")
-				//                self.tesseract.setVariableValue("FALSE", forKey: "load_bigram_dawg")
-				//                self.tesseract.setVariableValue("FALSE", forKey: "wordrec_enable_assoc")
+//				self.tesseract.setVariableValue("FALSE", forKey: "load_system_dawg")
+//				self.tesseract.setVariableValue("FALSE", forKey: "load_freq_dawg")
+//				self.tesseract.setVariableValue("FALSE", forKey: "load_unambig_dawg")
+//				self.tesseract.setVariableValue("FALSE", forKey: "load_punc_dawg")
+//				self.tesseract.setVariableValue("FALSE", forKey: "load_number_dawg")
+//				self.tesseract.setVariableValue("FALSE", forKey: "load_fixed_length_dawgs")
+//				self.tesseract.setVariableValue("FALSE", forKey: "load_bigram_dawg")
+//				self.tesseract.setVariableValue("FALSE", forKey: "wordrec_enable_assoc")
 				
-				self.tesseract.image = image.g8_blackAndWhite()
+				// self.tesseract.pageSegmentationMode = .SingleLine
+
+				let blackWhiteImage = self.scaleImage(image.g8_blackAndWhite(), maxDimension: 640)
+				
+//				let stillImageSource = GPUImagePicture(image: blackWhiteImage)
+//				let stillImageFilter = GPUImageColorInvertFilter()
+//
+//				stillImageSource.addTarget(stillImageFilter)
+//				stillImageFilter.useNextFrameForImageCapture()
+//				stillImageSource.processImage()
+//				
+//				self.finalImageView.image = stillImageFilter.imageFromCurrentFramebuffer()
+				
+				self.finalImageView.image = blackWhiteImage
+				
+				self.tesseract.image = self.finalImageView.image
+				
+				self.tesseract.maximumRecognitionTime = 1
+				
 				print("- Start recognize")
 				self.tesseract.recognize()
 				result = self.tesseract.recognizedText
@@ -215,20 +235,60 @@ public class ScannerPriceTagViewController: UIViewController {
 			
 			print("Scanresult : \(result)")
 			
+//			let alert = UIAlertController(title: "Continua", message: "Ler proxima imagem?", preferredStyle: .Alert)
+//			alert.addAction(UIAlertAction(title: "Sim", style: .Default, handler: { (action) -> Void in
+//				
+//				self.StartScan(self)
+//				
+//			}))
+//			
+//			alert.addAction(UIAlertAction(title: "Nao", style: .Cancel, handler: { (action) -> Void in
+//				
+//				self.videoCamera.stopCameraCapture()
+//				if let r = result {
+//					self.succesfullScan(r)
+//				}
+//			}))
+//			
+//			self.presentViewController(alert, animated: true, completion: nil)
+			
 			// Perform OCR
 			if let r = result {
 				
 				if r == "" || !r.isNumeric() {
 					print("Scan quality insufficient : \(r)")
 				} else {
-					self.videoCamera.stopCameraCapture()
-					self.succesfullScan(r)
-					return
+					
 				}
 			}
+			
 			self.StartScan(self)
+
 			
 		}
+	}
+	
+	func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
+		
+  var scaledSize = CGSize(width: maxDimension, height: maxDimension)
+  var scaleFactor: CGFloat
+		
+  if image.size.width > image.size.height {
+	scaleFactor = image.size.height / image.size.width
+	scaledSize.width = maxDimension
+	scaledSize.height = scaledSize.width * scaleFactor
+} else {
+	scaleFactor = image.size.width / image.size.height
+	scaledSize.height = maxDimension
+	scaledSize.width = scaledSize.height * scaleFactor
+  }
+		
+  UIGraphicsBeginImageContext(scaledSize)
+  image.drawInRect(CGRectMake(0, 0, scaledSize.width, scaledSize.height))
+  let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+  UIGraphicsEndImageContext()
+		
+  return scaledImage
 	}
 	
 	/**
