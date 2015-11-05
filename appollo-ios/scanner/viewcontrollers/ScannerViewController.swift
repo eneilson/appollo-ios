@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ScannerViewController: UIViewController {
 
@@ -18,24 +19,15 @@ class ScannerViewController: UIViewController {
         self.registerForNotification()
 
         // Do any additional setup after loading the view.
-//		let barCodeScanner = (self.storyboard?.instantiateViewControllerWithIdentifier("ScannerBarCodeViewController")) as! ScannerBarCodeViewController
-//
-//		barCodeScanner.tapHandler = { point in
-//			print(point)
-//		}
-//		
-//		barCodeScanner.barcodesHandler = { barcodes in
-//			for barcode in barcodes {
-//				print("Barcode found: type=" + barcode.type + " value=" + barcode.stringValue)
-//				self.barCodeView.text = barcode.stringValue
-//				barCodeScanner.dismissViewControllerAnimated(true, completion: nil)
-//			}
-//		}
-//		
-//		self.presentViewController(barCodeScanner, animated: true, completion: nil)
     }
 
     func startScan() {
+        let barCodeScanner = (self.storyboard?.instantiateViewControllerWithIdentifier("ScannerBarCodeViewController")) as! ScannerBarCodeViewController
+        
+        self.presentViewController(barCodeScanner, animated: true, completion: nil)
+    }
+    
+    func startScanPrice() {
         let barCodeScanner = (self.storyboard?.instantiateViewControllerWithIdentifier("ScannerPriceTagViewController")) as! ScannerPriceTagViewController
         self.presentViewController(barCodeScanner, animated: true, completion: nil)
     }
@@ -48,6 +40,20 @@ class ScannerViewController: UIViewController {
     func registerForNotification() {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "didReadPriceLabel:", name: kDidReadPriceLabelNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didReadBarcode:", name: kDidReadBarCodeNotification, object: nil)
+        
+    }
+    
+    func didReadBarcode(notification: NSNotification) {
+        let barcodes = notification.userInfo!["barcodes"] as! [AVMetadataMachineReadableCodeObject]
+        
+        // search in the database for this product
+        
+        
+        // if has a recent price for this supermarket ask teh user if the price is uptodate
+        
+        // if the price is not uptodate
+        self.startScanPrice()
         
     }
     

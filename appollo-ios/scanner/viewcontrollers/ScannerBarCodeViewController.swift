@@ -13,10 +13,14 @@ class ScannerBarCodeViewController: RSCodeReaderViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		self.focusMarkLayer.strokeColor = UIColor.blackColor().CGColor
-		
+		self.focusMarkLayer.strokeColor = UIColor.yellowColor().CGColor
 		self.cornersLayer.strokeColor = UIColor.redColor().CGColor
 		
+        self.barcodesHandler = { barcodes in
+            NSNotificationCenter.defaultCenter().postNotificationName(kDidReadBarCodeNotification, object: self, userInfo: ["barcodes": barcodes])
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
         // Do any additional setup after loading the view.
     }
 

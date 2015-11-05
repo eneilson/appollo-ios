@@ -54,28 +54,22 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         button.setImage(highlightImage, forState: .Highlighted)
 
         button.backgroundColor = UIColor(hex: SaveThePiggyApperance.mainColor)
-//        button.setBackgroundImage(buttonImage, forState: UIControlState.Normal)
-//        button.setBackgroundImage(highlightImage, forState: UIControlState.Highlighted)
         button.contentMode = .ScaleAspectFit
-        
-//        UIButton.appearanceWhenContainedInInstancesOfClasses([UITabBar)).tintColor = UIColor.whiteColor()
         button.tintColor = UIColor.whiteColor()
-        
-        let heightDifference:CGFloat = buttonImage.size.height - self.tabBar.frame.size.height
-        if heightDifference < 0 {
-            button.center = self.tabBar.center;
-        } else {
-            var center: CGPoint = self.tabBar.center;
-            center.y = center.y - heightDifference / 2.0;
-            button.center = center;
-        }
         
         button.layer.cornerRadius = button.frame.size.width / 2
         button.layer.masksToBounds = true
         
         button.addTarget(self, action: "changeTabToMiddleTab:", forControlEvents: UIControlEvents.TouchUpInside)
         
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
         self.view.addSubview(button)
+        
+        self.button.addConstraint(NSLayoutConstraint(item: button, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1, constant: 70))
+        self.button.addConstraint(NSLayoutConstraint(item: button, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1, constant: 70))
+        self.view.addConstraint(NSLayoutConstraint(item: button, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1, constant: 0))
+        self.view.addConstraint(NSLayoutConstraint(item: button, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .BottomMargin, multiplier: 1, constant: 1))
     }
     
     

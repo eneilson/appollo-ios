@@ -313,8 +313,8 @@
 		3F195CC41BDA446300CF7026 /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
-				3FFD5DCA1BE105D000C0DB2B /* HistoryViewController.swift */,
 				3F195CCC1BDA49DD00CF7026 /* cell */,
+				3FFD5DCA1BE105D000C0DB2B /* HistoryViewController.swift */,
 				0B62EC781BE05F1700481FD7 /* ShoppingCartTableViewController.swift */,
 				0B62EC761BE05F1000481FD7 /* AddProductViewController.swift */,
 			);
@@ -573,7 +573,7 @@
 				TargetAttributes = {
 					3F53DB631BD5261400EEFF85 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = P525YXXD7U;
+						DevelopmentTeam = Y7K5S2P7F6;
 					};
 					3F53DB7A1BD5261500EEFF85 = {
 						CreatedOnToolsVersion = 7.0.1;

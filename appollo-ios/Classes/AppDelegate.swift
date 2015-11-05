@@ -21,6 +21,7 @@ func backgroundThread(delay: Double = 0.0, background: (() -> Void)? = nil, comp
 }
 
 let kDidReadPriceLabelNotification = "DidReadPriceLabel"
+let kDidReadBarCodeNotification = "DidReadBarcode"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

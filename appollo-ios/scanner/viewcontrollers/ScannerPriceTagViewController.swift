@@ -39,7 +39,7 @@ public class ScannerPriceTagViewController: UIViewController {
 	var averageColor = GPUImageAverageColor()
 	
 	// Tesseract OCR
-	var tesseract: G8Tesseract = G8Tesseract(language: "eng")
+	var tesseract: G8Tesseract = G8Tesseract(language: "eng+osd")
     
     var lastReadPrice: NSNumber?
     
@@ -47,7 +47,7 @@ public class ScannerPriceTagViewController: UIViewController {
 		videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSessionPreset1920x1080, cameraPosition: .Back)
 		videoCamera.outputImageOrientation = .Portrait;
 		
-		tesseract.engineMode = .TesseractCubeCombined
+		tesseract.engineMode = .TesseractOnly
 		super.init(coder: aDecoder)
 	}
 	
@@ -86,20 +86,8 @@ public class ScannerPriceTagViewController: UIViewController {
 		}
 		
 		// Chaining the filters
-		videoCamera.addTarget(contrast)
-		//exposure.addTarget(highlightShadow)
-		//highlightShadow.addTarget(contrast)
-		//saturation.addTarget(contrast)
-		//contrast.addTarget(self.filterView)
+        videoCamera.addTarget(contrast)
         contrast.addTarget(self.filterView)
-		
-		// Strange! Adding this filter will give a great readable picture, but the OCR won't work.
-		// contrast.addTarget(adaptiveTreshold)
-		// adaptiveTreshold.addTarget(self.filterView)
-		
-		// Adding these 2 extra filters to automatically control exposure depending of the average color in the scan area
-		contrast.addTarget(averageColor)
-		//crop.addTarget(averageColor)
 		
 		self.view.backgroundColor = UIColor.whiteColor()
         
@@ -110,7 +98,7 @@ public class ScannerPriceTagViewController: UIViewController {
 		self.view.backgroundColor = UIColor.blackColor()
 		
 		self.videoCamera.startCameraCapture()
-		self.timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("scan"), userInfo: nil, repeats: false)
+		self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("scan"), userInfo: nil, repeats: false)
 	}
 	
 	/**
@@ -123,7 +111,6 @@ public class ScannerPriceTagViewController: UIViewController {
 		self.videoCamera.stopCameraCapture()
 		timer?.invalidate()
 		timer = nil
-		abbortScan()
         self.dismissViewControllerAnimated(true, completion: nil)
 	}
 	
@@ -153,59 +140,42 @@ public class ScannerPriceTagViewController: UIViewController {
 			
 			autoreleasepool {
 				// Crop scan area
-				let cropRect:CGRect! = CGRect(x: 350,y: 250,width: 350, height: 1700)
+				let cropRect:CGRect! = CGRect(x: 300,y: 180, width: 450, height: 1400)
 				let imageRef:CGImageRef! = CGImageCreateWithImageInRect(snapshot.CGImage, cropRect);
 //                let imageRef = snapshot.CGImage!
 				//let croppedImage:UIImage = UIImage(CGImage: imageRef)
 				
 				// Four times faster scan speed when the image is smaller. Another bennefit is that the OCR results are better at this resolution
-				let croppedImage:UIImage =   UIImage(CGImage: imageRef).resizedImageToFitInSize(CGSize(width: 350 * 0.5 , height: 1200 ), scaleIfSmaller: true)
+				let croppedImage:UIImage =   UIImage(CGImage: imageRef).resizedImageToFitInSize(CGSize(width: 350 * 0.5 , height: 1700 * 0.5), scaleIfSmaller: true)
 				
 				
 				// Rotate cropped image
 				let selectedFilter = GPUImageTransformFilter()
 				selectedFilter.setInputRotation(kGPUImageRotateRight, atIndex: 0)
 				let image:UIImage = selectedFilter.imageByFilteringImage(croppedImage)
-				
-				// Start OCR
-				// download traineddata to tessdata folder for language from:
-				// https://code.google.com/p/tesseract-ocr/downloads/list
-//				self.tesseract.setVariableValue("0123456789$.,", forKey: "tessedit_char_whitelist");
-//				self.tesseract.setVariableValue("FALSE", forKey: "x_ht_quality_check")
-//				self.tesseract.setVariableValue("\(G8PageSegmentationMode.SingleChar)", forKey: kG8ParamTesseditPagesegMode)
-				
-				//Testing OCR optimisations
-//				self.tesseract.setVariableValue("FALSE", forKey: "load_system_dawg")
-//				self.tesseract.setVariableValue("FALSE", forKey: "load_freq_dawg")
-//				self.tesseract.setVariableValue("FALSE", forKey: "load_unambig_dawg")
-//				self.tesseract.setVariableValue("FALSE", forKey: "load_punc_dawg")
-//				self.tesseract.setVariableValue("FALSE", forKey: "load_number_dawg")
-//				self.tesseract.setVariableValue("FALSE", forKey: "load_fixed_length_dawgs")
-//				self.tesseract.setVariableValue("FALSE", forKey: "load_bigram_dawg")
-//				self.tesseract.setVariableValue("FALSE", forKey: "wordrec_enable_assoc")
-				
-				// self.tesseract.pageSegmentationMode = .SingleLine
 
 				let blackWhiteImage = self.scaleImage(image.g8_blackAndWhite(), maxDimension: 640)
 				
-//				let stillImageSource = GPUImagePicture(image: blackWhiteImage)
-//				let stillImageFilter = GPUImageColorInvertFilter()
-//
-//				stillImageSource.addTarget(stillImageFilter)
-//				stillImageFilter.useNextFrameForImageCapture()
-//				stillImageSource.processImage()
-//				
-//				self.finalImageView.image = stillImageFilter.imageFromCurrentFramebuffer()
-				
-				self.finalImageView.image = blackWhiteImage
-				
-				self.tesseract.image = self.finalImageView.image
+//                self.tesseract.setVariableValue("0123456789,.", forKey: "tessedit_char_whitelist")
+                self.tesseract.setVariableValue("FALSE", forKey: "x_ht_quality_check")
+                
+				// self.finalImageView.image = blackWhiteImage
+                
+//                self.tesseract.setVariableValue(kG8ParamTesseditCharWhitelist, forKey: "0123456789,.$")
+                
+//                UIImageWriteToSavedPhotosAlbum(blackWhiteImage, nil, nil, nil)
+                
+				self.tesseract.image = blackWhiteImage
+                self.tesseract.pageSegmentationMode = .Auto
 				
 				self.tesseract.maximumRecognitionTime = 1
 				
 				print("- Start recognize")
 				self.tesseract.recognize()
 				result = self.tesseract.recognizedText
+                
+                // UIImageWriteToSavedPhotosAlbum(self.tesseract.thresholdedImage, nil, nil, nil)
+                
 				//tesseract = nil
 				G8Tesseract.clearCache()
 			}
@@ -215,8 +185,9 @@ public class ScannerPriceTagViewController: UIViewController {
 				
                 let str = r.stringByRemovingAllWhitespaces()
                 
+                print("Scanresult : \(str)")
+                
                 let formatter = NSNumberFormatter()
-                formatter.numberStyle = .CurrencyStyle
                 
                 if str.contains(".") {
                     formatter.decimalSeparator = "."
@@ -230,12 +201,11 @@ public class ScannerPriceTagViewController: UIViewController {
                         if price == lastPrice {
                             // 2x o mesmo preco portanto assume esse como o correto
                             self.videoCamera.stopCameraCapture()
-                            self.succesfullScan(r)
                             
                             // dismiss
                             
                             // notifca o controller pai que leu o preco e qual o preco lido
-                            NSNotificationCenter.defaultCenter().postNotificationName(kDidReadPriceLabelNotification, object: self, userInfo: [price: price])
+                            NSNotificationCenter.defaultCenter().postNotificationName(kDidReadPriceLabelNotification, object: self, userInfo: ["price": price])
                             self.dismissViewControllerAnimated(true, completion: nil)
                             
                             return
@@ -251,42 +221,25 @@ public class ScannerPriceTagViewController: UIViewController {
 	
 	func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
 		
-  var scaledSize = CGSize(width: maxDimension, height: maxDimension)
-  var scaleFactor: CGFloat
+        var scaledSize = CGSize(width: maxDimension, height: maxDimension)
+        var scaleFactor: CGFloat
 		
-  if image.size.width > image.size.height {
-	scaleFactor = image.size.height / image.size.width
-	scaledSize.width = maxDimension
-	scaledSize.height = scaledSize.width * scaleFactor
-} else {
-	scaleFactor = image.size.width / image.size.height
-	scaledSize.height = maxDimension
-	scaledSize.width = scaledSize.height * scaleFactor
-  }
+        if image.size.width > image.size.height {
+            scaleFactor = image.size.height / image.size.width
+            scaledSize.width = maxDimension
+            scaledSize.height = scaledSize.width * scaleFactor
+        } else {
+            scaleFactor = image.size.width / image.size.height
+            scaledSize.height = maxDimension
+            scaledSize.width = scaledSize.height * scaleFactor
+        }
 		
-  UIGraphicsBeginImageContext(scaledSize)
-  image.drawInRect(CGRectMake(0, 0, scaledSize.width, scaledSize.height))
-  let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-  UIGraphicsEndImageContext()
+        UIGraphicsBeginImageContext(scaledSize)
+        image.drawInRect(CGRectMake(0, 0, scaledSize.width, scaledSize.height))
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
 		
-  return scaledImage
+        return scaledImage
 	}
-	
-	/**
-	Override this function in your own class for processing the result
-	
-	:param: mrz The MRZ result
-	*/
-	public func succesfullScan(result: String) {
-		// do something
-	}
-	
-	/**
-	Override this function in your own class for processing a cancel
-	*/
-	public func abbortScan() {
-		// abort
-	}
-	
 	
 }
