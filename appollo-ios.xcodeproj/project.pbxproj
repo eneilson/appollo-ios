@@ -62,12 +62,12 @@
 		3F89740A1BE2497300E5A1D4 /* RSUPCEGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8973F71BE2497300E5A1D4 /* RSUPCEGenerator.swift */; };
 		3F89740B1BE2497300E5A1D4 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8973F81BE2497300E5A1D4 /* StringExtension.swift */; };
 		3F89740C1BE2497300E5A1D4 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8973F91BE2497300E5A1D4 /* UIColorExtension.swift */; };
-		3F89740E1BE249C800E5A1D4 /* ScannerBarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89740D1BE249C800E5A1D4 /* ScannerBarCodeViewController.swift */; };
-		3F8974101BE24BE300E5A1D4 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89740F1BE24BE300E5A1D4 /* ScannerViewController.swift */; };
 		3F8974121BE2531500E5A1D4 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8974111BE2531500E5A1D4 /* UIImage+Resize.swift */; };
-		3F8974141BE258BB00E5A1D4 /* ScannerPriceTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8974131BE258BB00E5A1D4 /* ScannerPriceTagViewController.swift */; };
 		3F8974331BE2596C00E5A1D4 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8974321BE2595100E5A1D4 /* GPUImage.framework */; };
 		3F8974341BE2596C00E5A1D4 /* GPUImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8974321BE2595100E5A1D4 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3FE7279F1BEB6614000126E5 /* ScannerBarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7279C1BEB6614000126E5 /* ScannerBarCodeViewController.swift */; };
+		3FE727A01BEB6614000126E5 /* ScannerPriceTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7279D1BEB6614000126E5 /* ScannerPriceTagViewController.swift */; };
+		3FE727A11BEB6614000126E5 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7279E1BEB6614000126E5 /* ScannerViewController.swift */; };
 		3FFD5DCB1BE105D000C0DB2B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD5DCA1BE105D000C0DB2B /* HistoryViewController.swift */; };
 		3FFD5DCD1BE1096B00C0DB2B /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD5DCC1BE1096B00C0DB2B /* HistoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -202,12 +202,12 @@
 		3F8973F71BE2497300E5A1D4 /* RSUPCEGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUPCEGenerator.swift; sourceTree = "<group>"; };
 		3F8973F81BE2497300E5A1D4 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		3F8973F91BE2497300E5A1D4 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		3F89740D1BE249C800E5A1D4 /* ScannerBarCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerBarCodeViewController.swift; path = scanner/viewcontrollers/ScannerBarCodeViewController.swift; sourceTree = "<group>"; };
-		3F89740F1BE24BE300E5A1D4 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerViewController.swift; path = scanner/viewcontrollers/ScannerViewController.swift; sourceTree = "<group>"; };
 		3F8974111BE2531500E5A1D4 /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Resize.swift"; path = "Classes/extensions/UIImage+Resize.swift"; sourceTree = "<group>"; };
-		3F8974131BE258BB00E5A1D4 /* ScannerPriceTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerPriceTagViewController.swift; path = scanner/viewcontrollers/ScannerPriceTagViewController.swift; sourceTree = "<group>"; };
 		3F8974291BE2595000E5A1D4 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "vendor/Tesseract-OCR-iOS/../GPUImage/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
 		3F9806281BD666B9000A51EF /* appollo-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "appollo-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		3FE7279C1BEB6614000126E5 /* ScannerBarCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerBarCodeViewController.swift; path = Classes/scanner/viewcontrollers/ScannerBarCodeViewController.swift; sourceTree = "<group>"; };
+		3FE7279D1BEB6614000126E5 /* ScannerPriceTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerPriceTagViewController.swift; path = Classes/scanner/viewcontrollers/ScannerPriceTagViewController.swift; sourceTree = "<group>"; };
+		3FE7279E1BEB6614000126E5 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerViewController.swift; path = Classes/scanner/viewcontrollers/ScannerViewController.swift; sourceTree = "<group>"; };
 		3FFD5DCA1BE105D000C0DB2B /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = Classes/tabs/controllers/HistoryViewController.swift; sourceTree = "<group>"; };
 		3FFD5DCC1BE1096B00C0DB2B /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewCell.swift; path = "Classes/shopping-cart/viewcontrollers/cell/HistoryTableViewCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -440,10 +440,10 @@
 		3F88804F1BD66B5500586E04 /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				3FE7279C1BEB6614000126E5 /* ScannerBarCodeViewController.swift */,
+				3FE7279D1BEB6614000126E5 /* ScannerPriceTagViewController.swift */,
+				3FE7279E1BEB6614000126E5 /* ScannerViewController.swift */,
 				0B62EC741BE05EEB00481FD7 /* ScannerViewControllerPOC.swift */,
-				3F89740D1BE249C800E5A1D4 /* ScannerBarCodeViewController.swift */,
-				3F89740F1BE24BE300E5A1D4 /* ScannerViewController.swift */,
-				3F8974131BE258BB00E5A1D4 /* ScannerPriceTagViewController.swift */,
 			);
 			name = viewcontrollers;
 			sourceTree = "<group>";
@@ -676,7 +676,6 @@
 				3F8973FD1BE2497300E5A1D4 /* RSCode39Mod43Generator.swift in Sources */,
 				3FFD5DCD1BE1096B00C0DB2B /* HistoryTableViewCell.swift in Sources */,
 				3F8974061BE2497300E5A1D4 /* RSFocusMarkLayer.swift in Sources */,
-				3F8974101BE24BE300E5A1D4 /* ScannerViewController.swift in Sources */,
 				0B62EC731BE05EDF00481FD7 /* AppDelegate.swift in Sources */,
 				3F8974121BE2531500E5A1D4 /* UIImage+Resize.swift in Sources */,
 				3F8974041BE2497300E5A1D4 /* RSEANGenerator.swift in Sources */,
@@ -684,15 +683,15 @@
 				3F8974011BE2497300E5A1D4 /* RSCodeLayer.swift in Sources */,
 				0B62EC9C1BE083A700481FD7 /* MainTabBarController.swift in Sources */,
 				3F8974091BE2497300E5A1D4 /* RSUnifiedCodeGenerator.swift in Sources */,
+				3FE7279F1BEB6614000126E5 /* ScannerBarCodeViewController.swift in Sources */,
 				0B62EC951BE06D0C00481FD7 /* SaveThePiggyApperance.swift in Sources */,
 				0B62EC791BE05F1700481FD7 /* ShoppingCartTableViewController.swift in Sources */,
-				3F8974141BE258BB00E5A1D4 /* ScannerPriceTagViewController.swift in Sources */,
-				3F89740E1BE249C800E5A1D4 /* ScannerBarCodeViewController.swift in Sources */,
 				0B62EC711BE05ED600481FD7 /* DataGenerator.swift in Sources */,
 				0B62ECAB1BE0883800481FD7 /* UIController+OrientationSupport.swift in Sources */,
 				0B62EC831BE05F3200481FD7 /* ShoppingCartItem+CoreDataProperties.swift in Sources */,
 				3F8974051BE2497300E5A1D4 /* RSExtendedCode39Generator.swift in Sources */,
 				3F8973FB1BE2497300E5A1D4 /* RSCode128Generator.swift in Sources */,
+				3FE727A11BEB6614000126E5 /* ScannerViewController.swift in Sources */,
 				3F8974031BE2497300E5A1D4 /* RSCornersLayer.swift in Sources */,
 				0B62EC771BE05F1000481FD7 /* AddProductViewController.swift in Sources */,
 				0B62EC981BE0714300481FD7 /* UIColor+Hex.swift in Sources */,
@@ -713,6 +712,7 @@
 				0B62EC7B1BE05F2000481FD7 /* ShoppingCartTableViewCell.swift in Sources */,
 				3F8974081BE2497300E5A1D4 /* RSITFGenerator.swift in Sources */,
 				3F8974001BE2497300E5A1D4 /* RSCodeGenerator.swift in Sources */,
+				3FE727A01BEB6614000126E5 /* ScannerPriceTagViewController.swift in Sources */,
 				0BF5F5AF1BEADD9F000D324A /* String+Trim.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

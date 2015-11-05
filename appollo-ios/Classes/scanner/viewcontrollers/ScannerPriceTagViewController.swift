@@ -139,31 +139,22 @@ public class ScannerPriceTagViewController: UIViewController {
 			var result:String?
 			
 			autoreleasepool {
-				// Crop scan area
-				let cropRect:CGRect! = CGRect(x: 300,y: 180, width: 450, height: 1400)
+				let cropRect:CGRect! = CGRect(x: 340,y: 250, width: 360, height: 1200)
 				let imageRef:CGImageRef! = CGImageCreateWithImageInRect(snapshot.CGImage, cropRect);
-//                let imageRef = snapshot.CGImage!
-				//let croppedImage:UIImage = UIImage(CGImage: imageRef)
-				
-				// Four times faster scan speed when the image is smaller. Another bennefit is that the OCR results are better at this resolution
-				let croppedImage:UIImage =   UIImage(CGImage: imageRef).resizedImageToFitInSize(CGSize(width: 350 * 0.5 , height: 1700 * 0.5), scaleIfSmaller: true)
-				
+				let croppedImage:UIImage = UIImage(CGImage: imageRef)
 				
 				// Rotate cropped image
+				// TODO be smart at this point
 				let selectedFilter = GPUImageTransformFilter()
 				selectedFilter.setInputRotation(kGPUImageRotateRight, atIndex: 0)
 				let image:UIImage = selectedFilter.imageByFilteringImage(croppedImage)
 
-				let blackWhiteImage = self.scaleImage(image.g8_blackAndWhite(), maxDimension: 640)
+				let blackWhiteImage = self.scaleImage(image.g8_blackAndWhite(), maxDimension: 480)
 				
-//                self.tesseract.setVariableValue("0123456789,.", forKey: "tessedit_char_whitelist")
-                self.tesseract.setVariableValue("FALSE", forKey: "x_ht_quality_check")
+				self.tesseract.setVariableValue("0123456789.$,", forKey: "tessedit_char_whitelist");
+				self.tesseract.setVariableValue("FALSE", forKey: "x_ht_quality_check")
                 
-				// self.finalImageView.image = blackWhiteImage
-                
-//                self.tesseract.setVariableValue(kG8ParamTesseditCharWhitelist, forKey: "0123456789,.$")
-                
-//                UIImageWriteToSavedPhotosAlbum(blackWhiteImage, nil, nil, nil)
+				// UIImageWriteToSavedPhotosAlbum(blackWhiteImage, nil, nil, nil)
                 
 				self.tesseract.image = blackWhiteImage
                 self.tesseract.pageSegmentationMode = .Auto
@@ -175,8 +166,7 @@ public class ScannerPriceTagViewController: UIViewController {
 				result = self.tesseract.recognizedText
                 
                 // UIImageWriteToSavedPhotosAlbum(self.tesseract.thresholdedImage, nil, nil, nil)
-                
-				//tesseract = nil
+				
 				G8Tesseract.clearCache()
 			}
 			
@@ -203,7 +193,6 @@ public class ScannerPriceTagViewController: UIViewController {
                             self.videoCamera.stopCameraCapture()
                             
                             // dismiss
-                            
                             // notifca o controller pai que leu o preco e qual o preco lido
                             NSNotificationCenter.defaultCenter().postNotificationName(kDidReadPriceLabelNotification, object: self, userInfo: ["price": price])
                             self.dismissViewControllerAnimated(true, completion: nil)
