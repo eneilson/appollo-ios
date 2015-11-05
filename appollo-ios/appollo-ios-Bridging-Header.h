@@ -3,5 +3,9 @@
 //
 
 #import <TesseractOCR/TesseractOCR.h>
+#import "KVNProgress.h"
+#import "UIColor+KVNContrast.h"
+#import "UIImage+KVNEmpty.h"
+#import "UIImage+KVNImageEffects.h"
 
 // #import <GPUimage/GPUImage.h>

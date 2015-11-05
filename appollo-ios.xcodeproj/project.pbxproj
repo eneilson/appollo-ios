@@ -36,6 +36,12 @@
 		3F53DB751BD5261400EEFF85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F53DB731BD5261400EEFF85 /* LaunchScreen.storyboard */; };
 		3F53DB801BD5261500EEFF85 /* appollo_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB7F1BD5261500EEFF85 /* appollo_iosTests.swift */; };
 		3F53DB8B1BD5261500EEFF85 /* appollo_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB8A1BD5261500EEFF85 /* appollo_iosUITests.swift */; };
+		3F875B531BEB921600BA6100 /* UIColor+KVNContrast.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F875B471BEB921600BA6100 /* UIColor+KVNContrast.m */; };
+		3F875B541BEB921600BA6100 /* UIImage+KVNEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F875B491BEB921600BA6100 /* UIImage+KVNEmpty.m */; };
+		3F875B551BEB921600BA6100 /* UIImage+KVNImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F875B4B1BEB921600BA6100 /* UIImage+KVNImageEffects.m */; };
+		3F875B561BEB921600BA6100 /* KVNProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F875B4E1BEB921600BA6100 /* KVNProgress.m */; };
+		3F875B571BEB921600BA6100 /* KVNProgressConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F875B501BEB921600BA6100 /* KVNProgressConfiguration.m */; };
+		3F875B581BEB921600BA6100 /* KVNProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F875B521BEB921600BA6100 /* KVNProgressView.xib */; };
 		3F8880401BD66A7300586E04 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F88803A1BD66A5500586E04 /* TesseractOCR.framework */; };
 		3F8880411BD66A7300586E04 /* TesseractOCR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F88803A1BD66A5500586E04 /* TesseractOCR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3F8880461BD66A9300586E04 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8880451BD66A9300586E04 /* CoreImage.framework */; };
@@ -68,6 +74,11 @@
 		3FE7279F1BEB6614000126E5 /* ScannerBarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7279C1BEB6614000126E5 /* ScannerBarCodeViewController.swift */; };
 		3FE727A01BEB6614000126E5 /* ScannerPriceTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7279D1BEB6614000126E5 /* ScannerPriceTagViewController.swift */; };
 		3FE727A11BEB6614000126E5 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE7279E1BEB6614000126E5 /* ScannerViewController.swift */; };
+		3FE727BA1BEB769F000126E5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE727AD1BEB7681000126E5 /* Alamofire.framework */; };
+		3FE727BB1BEB769F000126E5 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE727AD1BEB7681000126E5 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3FE727C21BEB76EA000126E5 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE727C11BEB76EA000126E5 /* ProductService.swift */; };
+		3FE727C51BEB79A0000126E5 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE727C31BEB79A0000126E5 /* Product+CoreDataProperties.swift */; };
+		3FE727C61BEB79A0000126E5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE727C41BEB79A0000126E5 /* Product.swift */; };
 		3FFD5DCB1BE105D000C0DB2B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD5DCA1BE105D000C0DB2B /* HistoryViewController.swift */; };
 		3FFD5DCD1BE1096B00C0DB2B /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD5DCC1BE1096B00C0DB2B /* HistoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -122,6 +133,62 @@
 			remoteGlobalIDString = BCE209E41943F20C002FEED8;
 			remoteInfo = GPUImageFramework;
 		};
+		3FE727AC1BEB7681000126E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE727A21BEB7680000126E5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		3FE727AE1BEB7681000126E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE727A21BEB7680000126E5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		3FE727B01BEB7681000126E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE727A21BEB7680000126E5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire OSX";
+		};
+		3FE727B21BEB7681000126E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE727A21BEB7680000126E5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire OSX Tests";
+		};
+		3FE727B41BEB7681000126E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE727A21BEB7680000126E5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		3FE727B61BEB7681000126E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE727A21BEB7680000126E5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		3FE727B81BEB7681000126E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE727A21BEB7680000126E5 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		3FE727BC1BEB769F000126E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE727A21BEB7680000126E5 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -132,6 +199,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				3F8880411BD66A7300586E04 /* TesseractOCR.framework in Embed Frameworks */,
+				3FE727BB1BEB769F000126E5 /* Alamofire.framework in Embed Frameworks */,
 				3F8974341BE2596C00E5A1D4 /* GPUImage.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -177,6 +245,17 @@
 		3F53DB861BD5261500EEFF85 /* appollo-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "appollo-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F53DB8A1BD5261500EEFF85 /* appollo_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appollo_iosUITests.swift; sourceTree = "<group>"; };
 		3F53DB8C1BD5261500EEFF85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F875B461BEB921600BA6100 /* UIColor+KVNContrast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KVNContrast.h"; sourceTree = "<group>"; };
+		3F875B471BEB921600BA6100 /* UIColor+KVNContrast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KVNContrast.m"; sourceTree = "<group>"; };
+		3F875B481BEB921600BA6100 /* UIImage+KVNEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KVNEmpty.h"; sourceTree = "<group>"; };
+		3F875B491BEB921600BA6100 /* UIImage+KVNEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KVNEmpty.m"; sourceTree = "<group>"; };
+		3F875B4A1BEB921600BA6100 /* UIImage+KVNImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KVNImageEffects.h"; sourceTree = "<group>"; };
+		3F875B4B1BEB921600BA6100 /* UIImage+KVNImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KVNImageEffects.m"; sourceTree = "<group>"; };
+		3F875B4D1BEB921600BA6100 /* KVNProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNProgress.h; sourceTree = "<group>"; };
+		3F875B4E1BEB921600BA6100 /* KVNProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNProgress.m; sourceTree = "<group>"; };
+		3F875B4F1BEB921600BA6100 /* KVNProgressConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNProgressConfiguration.h; sourceTree = "<group>"; };
+		3F875B501BEB921600BA6100 /* KVNProgressConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNProgressConfiguration.m; sourceTree = "<group>"; };
+		3F875B521BEB921600BA6100 /* KVNProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVNProgressView.xib; sourceTree = "<group>"; };
 		3F8880351BD66A5500586E04 /* Tesseract OCR iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Tesseract OCR iOS.xcodeproj"; path = "vendor/Tesseract-OCR-iOS/Tesseract OCR iOS.xcodeproj"; sourceTree = "<group>"; };
 		3F8880451BD66A9300586E04 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		3F8880471BD66A9A00586E04 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -208,6 +287,10 @@
 		3FE7279C1BEB6614000126E5 /* ScannerBarCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerBarCodeViewController.swift; path = Classes/scanner/viewcontrollers/ScannerBarCodeViewController.swift; sourceTree = "<group>"; };
 		3FE7279D1BEB6614000126E5 /* ScannerPriceTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerPriceTagViewController.swift; path = Classes/scanner/viewcontrollers/ScannerPriceTagViewController.swift; sourceTree = "<group>"; };
 		3FE7279E1BEB6614000126E5 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerViewController.swift; path = Classes/scanner/viewcontrollers/ScannerViewController.swift; sourceTree = "<group>"; };
+		3FE727A21BEB7680000126E5 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = vendor/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		3FE727C11BEB76EA000126E5 /* ProductService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductService.swift; path = Classes/product/service/ProductService.swift; sourceTree = "<group>"; };
+		3FE727C31BEB79A0000126E5 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataProperties.swift"; path = "Classes/product/domain/Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3FE727C41BEB79A0000126E5 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Product.swift; path = Classes/product/domain/Product.swift; sourceTree = "<group>"; };
 		3FFD5DCA1BE105D000C0DB2B /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = Classes/tabs/controllers/HistoryViewController.swift; sourceTree = "<group>"; };
 		3FFD5DCC1BE1096B00C0DB2B /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewCell.swift; path = "Classes/shopping-cart/viewcontrollers/cell/HistoryTableViewCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -228,6 +311,7 @@
 				3F88804A1BD66AA900586E04 /* Foundation.framework in Frameworks */,
 				3F8880481BD66A9A00586E04 /* UIKit.framework in Frameworks */,
 				3F8974331BE2596C00E5A1D4 /* GPUImage.framework in Frameworks */,
+				3FE727BA1BEB769F000126E5 /* Alamofire.framework in Frameworks */,
 				3F8880461BD66A9300586E04 /* CoreImage.framework in Frameworks */,
 				3F8880401BD66A7300586E04 /* TesseractOCR.framework in Frameworks */,
 			);
@@ -366,6 +450,7 @@
 		3F53DB661BD5261400EEFF85 /* appollo-ios */ = {
 			isa = PBXGroup;
 			children = (
+				3FE727BE1BEB76AD000126E5 /* product */,
 				0B62EC841BE05F4400481FD7 /* tessdata */,
 				0B62EC961BE0712200481FD7 /* extensions */,
 				0B62EC931BE06CD200481FD7 /* apperance */,
@@ -400,6 +485,49 @@
 				3F53DB8C1BD5261500EEFF85 /* Info.plist */,
 			);
 			path = "appollo-iosUITests";
+			sourceTree = "<group>";
+		};
+		3F875B441BEB921600BA6100 /* KVMProgress */ = {
+			isa = PBXGroup;
+			children = (
+				3F875B451BEB921600BA6100 /* Categories */,
+				3F875B4C1BEB921600BA6100 /* Classes */,
+				3F875B511BEB921600BA6100 /* Resources */,
+			);
+			name = KVMProgress;
+			path = vendor/KVMProgress;
+			sourceTree = "<group>";
+		};
+		3F875B451BEB921600BA6100 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3F875B461BEB921600BA6100 /* UIColor+KVNContrast.h */,
+				3F875B471BEB921600BA6100 /* UIColor+KVNContrast.m */,
+				3F875B481BEB921600BA6100 /* UIImage+KVNEmpty.h */,
+				3F875B491BEB921600BA6100 /* UIImage+KVNEmpty.m */,
+				3F875B4A1BEB921600BA6100 /* UIImage+KVNImageEffects.h */,
+				3F875B4B1BEB921600BA6100 /* UIImage+KVNImageEffects.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		3F875B4C1BEB921600BA6100 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3F875B4D1BEB921600BA6100 /* KVNProgress.h */,
+				3F875B4E1BEB921600BA6100 /* KVNProgress.m */,
+				3F875B4F1BEB921600BA6100 /* KVNProgressConfiguration.h */,
+				3F875B501BEB921600BA6100 /* KVNProgressConfiguration.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3F875B511BEB921600BA6100 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F875B521BEB921600BA6100 /* KVNProgressView.xib */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		3F8880361BD66A5500586E04 /* Products */ = {
@@ -494,12 +622,54 @@
 		3F98063E1BD6671B000A51EF /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				3F875B441BEB921600BA6100 /* KVMProgress */,
 				0B62EC691BE05D9300481FD7 /* SwiftRecord */,
 				3F8973E61BE2497300E5A1D4 /* RSBarcodes */,
+				3FE727A21BEB7680000126E5 /* Alamofire.xcodeproj */,
 				3F8974291BE2595000E5A1D4 /* GPUImage.xcodeproj */,
 				3F8880351BD66A5500586E04 /* Tesseract OCR iOS.xcodeproj */,
 			);
 			name = vendor;
+			sourceTree = "<group>";
+		};
+		3FE727A31BEB7680000126E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FE727AD1BEB7681000126E5 /* Alamofire.framework */,
+				3FE727AF1BEB7681000126E5 /* Alamofire iOS Tests.xctest */,
+				3FE727B11BEB7681000126E5 /* Alamofire.framework */,
+				3FE727B31BEB7681000126E5 /* Alamofire OSX Tests.xctest */,
+				3FE727B51BEB7681000126E5 /* Alamofire.framework */,
+				3FE727B71BEB7681000126E5 /* Alamofire tvOS Tests.xctest */,
+				3FE727B91BEB7681000126E5 /* Alamofire.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FE727BE1BEB76AD000126E5 /* product */ = {
+			isa = PBXGroup;
+			children = (
+				3FE727C01BEB76C7000126E5 /* service */,
+				3FE727BF1BEB76C0000126E5 /* domain */,
+			);
+			name = product;
+			sourceTree = "<group>";
+		};
+		3FE727BF1BEB76C0000126E5 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				3FE727C31BEB79A0000126E5 /* Product+CoreDataProperties.swift */,
+				3FE727C41BEB79A0000126E5 /* Product.swift */,
+			);
+			name = domain;
+			sourceTree = "<group>";
+		};
+		3FE727C01BEB76C7000126E5 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				3FE727C11BEB76EA000126E5 /* ProductService.swift */,
+			);
+			name = service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -519,6 +689,7 @@
 			dependencies = (
 				3F8880431BD66A7300586E04 /* PBXTargetDependency */,
 				3F8974361BE2596C00E5A1D4 /* PBXTargetDependency */,
+				3FE727BD1BEB769F000126E5 /* PBXTargetDependency */,
 			);
 			name = "appollo-ios";
 			productName = "appollo-ios";
@@ -573,7 +744,7 @@
 				TargetAttributes = {
 					3F53DB631BD5261400EEFF85 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = Y7K5S2P7F6;
+						DevelopmentTeam = P525YXXD7U;
 					};
 					3F53DB7A1BD5261500EEFF85 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -597,6 +768,10 @@
 			productRefGroup = 3F53DB651BD5261400EEFF85 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 3FE727A31BEB7680000126E5 /* Products */;
+					ProjectRef = 3FE727A21BEB7680000126E5 /* Alamofire.xcodeproj */;
+				},
 				{
 					ProductGroup = 3F89742A1BE2595000E5A1D4 /* Products */;
 					ProjectRef = 3F8974291BE2595000E5A1D4 /* GPUImage.xcodeproj */;
@@ -637,6 +812,55 @@
 			remoteRef = 3F8974311BE2595100E5A1D4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		3FE727AD1BEB7681000126E5 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 3FE727AC1BEB7681000126E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3FE727AF1BEB7681000126E5 /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = 3FE727AE1BEB7681000126E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3FE727B11BEB7681000126E5 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 3FE727B01BEB7681000126E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3FE727B31BEB7681000126E5 /* Alamofire OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire OSX Tests.xctest";
+			remoteRef = 3FE727B21BEB7681000126E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3FE727B51BEB7681000126E5 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 3FE727B41BEB7681000126E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3FE727B71BEB7681000126E5 /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = 3FE727B61BEB7681000126E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3FE727B91BEB7681000126E5 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 3FE727B81BEB7681000126E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -649,6 +873,7 @@
 				3F53DB721BD5261400EEFF85 /* Assets.xcassets in Resources */,
 				3F8973FA1BE2497300E5A1D4 /* Info.plist in Resources */,
 				3F53DB6D1BD5261400EEFF85 /* Main.storyboard in Resources */,
+				3F875B581BEB921600BA6100 /* KVNProgressView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,8 +901,11 @@
 				3F8973FD1BE2497300E5A1D4 /* RSCode39Mod43Generator.swift in Sources */,
 				3FFD5DCD1BE1096B00C0DB2B /* HistoryTableViewCell.swift in Sources */,
 				3F8974061BE2497300E5A1D4 /* RSFocusMarkLayer.swift in Sources */,
+				3FE727C51BEB79A0000126E5 /* Product+CoreDataProperties.swift in Sources */,
 				0B62EC731BE05EDF00481FD7 /* AppDelegate.swift in Sources */,
+				3FE727C61BEB79A0000126E5 /* Product.swift in Sources */,
 				3F8974121BE2531500E5A1D4 /* UIImage+Resize.swift in Sources */,
+				3FE727C21BEB76EA000126E5 /* ProductService.swift in Sources */,
 				3F8974041BE2497300E5A1D4 /* RSEANGenerator.swift in Sources */,
 				0B62EC811BE05F3200481FD7 /* ShoppingCart+CoreDataProperties.swift in Sources */,
 				3F8974011BE2497300E5A1D4 /* RSCodeLayer.swift in Sources */,
@@ -685,6 +913,8 @@
 				3F8974091BE2497300E5A1D4 /* RSUnifiedCodeGenerator.swift in Sources */,
 				3FE7279F1BEB6614000126E5 /* ScannerBarCodeViewController.swift in Sources */,
 				0B62EC951BE06D0C00481FD7 /* SaveThePiggyApperance.swift in Sources */,
+				3F875B531BEB921600BA6100 /* UIColor+KVNContrast.m in Sources */,
+				3F875B551BEB921600BA6100 /* UIImage+KVNImageEffects.m in Sources */,
 				0B62EC791BE05F1700481FD7 /* ShoppingCartTableViewController.swift in Sources */,
 				0B62EC711BE05ED600481FD7 /* DataGenerator.swift in Sources */,
 				0B62ECAB1BE0883800481FD7 /* UIController+OrientationSupport.swift in Sources */,
@@ -694,9 +924,11 @@
 				3FE727A11BEB6614000126E5 /* ScannerViewController.swift in Sources */,
 				3F8974031BE2497300E5A1D4 /* RSCornersLayer.swift in Sources */,
 				0B62EC771BE05F1000481FD7 /* AddProductViewController.swift in Sources */,
+				3F875B541BEB921600BA6100 /* UIImage+KVNEmpty.m in Sources */,
 				0B62EC981BE0714300481FD7 /* UIColor+Hex.swift in Sources */,
 				3F89740A1BE2497300E5A1D4 /* RSUPCEGenerator.swift in Sources */,
 				3F8974021BE2497300E5A1D4 /* RSCodeReaderViewController.swift in Sources */,
+				3F875B571BEB921600BA6100 /* KVNProgressConfiguration.m in Sources */,
 				3F53DB701BD5261400EEFF85 /* appollo_ios.xcdatamodeld in Sources */,
 				3F89740B1BE2497300E5A1D4 /* StringExtension.swift in Sources */,
 				3F89740C1BE2497300E5A1D4 /* UIColorExtension.swift in Sources */,
@@ -711,6 +943,7 @@
 				3F8973FF1BE2497300E5A1D4 /* RSCodeDataMatrixGenerator.swift in Sources */,
 				0B62EC7B1BE05F2000481FD7 /* ShoppingCartTableViewCell.swift in Sources */,
 				3F8974081BE2497300E5A1D4 /* RSITFGenerator.swift in Sources */,
+				3F875B561BEB921600BA6100 /* KVNProgress.m in Sources */,
 				3F8974001BE2497300E5A1D4 /* RSCodeGenerator.swift in Sources */,
 				3FE727A01BEB6614000126E5 /* ScannerPriceTagViewController.swift in Sources */,
 				0BF5F5AF1BEADD9F000D324A /* String+Trim.swift in Sources */,
@@ -755,6 +988,11 @@
 			isa = PBXTargetDependency;
 			name = GPUImageFramework;
 			targetProxy = 3F8974351BE2596C00E5A1D4 /* PBXContainerItemProxy */;
+		};
+		3FE727BD1BEB769F000126E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = 3FE727BC1BEB769F000126E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -871,6 +1109,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -896,6 +1135,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

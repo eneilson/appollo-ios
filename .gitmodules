@@ -5,3 +5,6 @@
 [submodule "vendor/GPUImage"]
 	path = vendor/GPUImage
 	url = https://github.com/BradLarson/GPUImage.git
+[submodule "vendor/Alamofire"]
+	path = vendor/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git

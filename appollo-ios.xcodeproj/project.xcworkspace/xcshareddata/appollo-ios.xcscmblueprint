@@ -5,14 +5,16 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "5473F492F25CEB254BEA86D6E5E2F04F0FD7808F" : 0,
+    "B191E73CD355A8EA7C8CCCDC6B07B6A7DE020437" : 0,
     "E609DD15689CC93D8F4D219EB393F30F9F726178" : 0,
-    "B191E73CD355A8EA7C8CCCDC6B07B6A7DE020437" : 0
+    "67620B5EFA902936DF04070AF595B76AB0333747" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "951EA416-60DB-421D-86D3-C04316FCF01E",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "5473F492F25CEB254BEA86D6E5E2F04F0FD7808F" : "appollo-ios\/",
+    "B191E73CD355A8EA7C8CCCDC6B07B6A7DE020437" : "appollo-ios\/vendor\/Tesseract-OCR-iOS\/",
     "E609DD15689CC93D8F4D219EB393F30F9F726178" : "appollo-ios\/vendor\/GPUImage\/",
-    "B191E73CD355A8EA7C8CCCDC6B07B6A7DE020437" : "appollo-ios\/vendor\/Tesseract-OCR-iOS\/"
+    "67620B5EFA902936DF04070AF595B76AB0333747" : "appollo-ios\/vendor\/Alamofire\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "appollo-ios",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -22,6 +24,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pauloavelar\/appollo-ios.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5473F492F25CEB254BEA86D6E5E2F04F0FD7808F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alamofire\/Alamofire.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67620B5EFA902936DF04070AF595B76AB0333747"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gali8\/Tesseract-OCR-iOS.git",

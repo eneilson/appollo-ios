@@ -38,6 +38,8 @@ class SaveThePiggyApperance {
         UIButton.appearance().tintColor = UIColor(hex: mainColor)
         
         UIStepper.appearance().tintColor = UIColor(hex: mainColor)
+		
+
         
     }
     
