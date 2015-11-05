@@ -22,6 +22,7 @@ public class ScannerPriceTagViewController: UIViewController {
 	// view que ira conter a imagem com os filtros aplicados
 	@IBOutlet var filterView: GPUImageView!
 	
+	@IBOutlet weak var finalImageView: UIImageView!
 	// timer para tentativa de leitura da tag de preco
 	var timer: NSTimer?
 	
@@ -45,6 +46,8 @@ public class ScannerPriceTagViewController: UIViewController {
 	public required init?(coder aDecoder: NSCoder) {
 		videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSessionPreset1920x1080, cameraPosition: .Back)
 		videoCamera.outputImageOrientation = .Portrait;
+		
+		tesseract.engineMode = .TesseractCubeCombined
 		super.init(coder: aDecoder)
 	}
 	
@@ -67,7 +70,7 @@ public class ScannerPriceTagViewController: UIViewController {
 		adaptiveTreshold.blurRadiusInPixels = 8.0
 		
 		// Only use this area for the OCR
-		crop.cropRegion = CGRectMake(350.0/1080.0, 110.0/1920.0, 350.0/1080, 1700.0/1920.0)
+		//crop.cropRegion = CGRectMake(350.0/1080.0, 110.0/1920.0, 350.0/1080, 1700.0/1920.0)
 		
 		// Try to dinamically optimize the exposure based on the average color
 		averageColor.colorAverageProcessingFinishedBlock = {(redComponent, greenComponent, blueComponent, alphaComponent, frameTime) in
@@ -83,9 +86,9 @@ public class ScannerPriceTagViewController: UIViewController {
 		}
 		
 		// Chaining the filters
-		videoCamera.addTarget(highlightShadow)
+		videoCamera.addTarget(contrast)
 		//exposure.addTarget(highlightShadow)
-		highlightShadow.addTarget(contrast)
+		//highlightShadow.addTarget(contrast)
 		//saturation.addTarget(contrast)
 		//contrast.addTarget(self.filterView)
         contrast.addTarget(self.filterView)
@@ -161,29 +164,45 @@ public class ScannerPriceTagViewController: UIViewController {
 				
 				// Rotate cropped image
 				let selectedFilter = GPUImageTransformFilter()
-				selectedFilter.setInputRotation(kGPUImageRotateLeft, atIndex: 0)
+				selectedFilter.setInputRotation(kGPUImageRotateRight, atIndex: 0)
 				let image:UIImage = selectedFilter.imageByFilteringImage(croppedImage)
 				
 				// Start OCR
 				// download traineddata to tessdata folder for language from:
 				// https://code.google.com/p/tesseract-ocr/downloads/list
-				// ocr traineddata ripped from:
-				// http://getandroidapp.org/applications/business/79952-nfc-passport-reader-2-0-8.html
-				// see http://www.sk-spell.sk.cx/tesseract-ocr-en-variables
-				//self.tesseract.setVariableValue("0123456789$.,", forKey: "tessedit_char_whitelist");
-				//self.tesseract.setVariableValue("FALSE", forKey: "x_ht_quality_check")
+//				self.tesseract.setVariableValue("0123456789$.,", forKey: "tessedit_char_whitelist");
+//				self.tesseract.setVariableValue("FALSE", forKey: "x_ht_quality_check")
+//				self.tesseract.setVariableValue("\(G8PageSegmentationMode.SingleChar)", forKey: kG8ParamTesseditPagesegMode)
 				
 				//Testing OCR optimisations
-				//                self.tesseract.setVariableValue("FALSE", forKey: "load_system_dawg")
-				//                self.tesseract.setVariableValue("FALSE", forKey: "load_freq_dawg")
-				//                self.tesseract.setVariableValue("FALSE", forKey: "load_unambig_dawg")
-				//                self.tesseract.setVariableValue("FALSE", forKey: "load_punc_dawg")
-				//                self.tesseract.setVariableValue("FALSE", forKey: "load_number_dawg")
-				//                self.tesseract.setVariableValue("FALSE", forKey: "load_fixed_length_dawgs")
-				//                self.tesseract.setVariableValue("FALSE", forKey: "load_bigram_dawg")
-				//                self.tesseract.setVariableValue("FALSE", forKey: "wordrec_enable_assoc")
+//				self.tesseract.setVariableValue("FALSE", forKey: "load_system_dawg")
+//				self.tesseract.setVariableValue("FALSE", forKey: "load_freq_dawg")
+//				self.tesseract.setVariableValue("FALSE", forKey: "load_unambig_dawg")
+//				self.tesseract.setVariableValue("FALSE", forKey: "load_punc_dawg")
+//				self.tesseract.setVariableValue("FALSE", forKey: "load_number_dawg")
+//				self.tesseract.setVariableValue("FALSE", forKey: "load_fixed_length_dawgs")
+//				self.tesseract.setVariableValue("FALSE", forKey: "load_bigram_dawg")
+//				self.tesseract.setVariableValue("FALSE", forKey: "wordrec_enable_assoc")
 				
-				self.tesseract.image = image.g8_blackAndWhite()
+				// self.tesseract.pageSegmentationMode = .SingleLine
+
+				let blackWhiteImage = self.scaleImage(image.g8_blackAndWhite(), maxDimension: 640)
+				
+//				let stillImageSource = GPUImagePicture(image: blackWhiteImage)
+//				let stillImageFilter = GPUImageColorInvertFilter()
+//
+//				stillImageSource.addTarget(stillImageFilter)
+//				stillImageFilter.useNextFrameForImageCapture()
+//				stillImageSource.processImage()
+//				
+//				self.finalImageView.image = stillImageFilter.imageFromCurrentFramebuffer()
+				
+				self.finalImageView.image = blackWhiteImage
+				
+				self.tesseract.image = self.finalImageView.image
+				
+				self.tesseract.maximumRecognitionTime = 1
+				
 				print("- Start recognize")
 				self.tesseract.recognize()
 				result = self.tesseract.recognizedText
@@ -228,6 +247,29 @@ public class ScannerPriceTagViewController: UIViewController {
 			self.startScan()
 			
 		}
+	}
+	
+	func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
+		
+  var scaledSize = CGSize(width: maxDimension, height: maxDimension)
+  var scaleFactor: CGFloat
+		
+  if image.size.width > image.size.height {
+	scaleFactor = image.size.height / image.size.width
+	scaledSize.width = maxDimension
+	scaledSize.height = scaledSize.width * scaleFactor
+} else {
+	scaleFactor = image.size.width / image.size.height
+	scaledSize.height = maxDimension
+	scaledSize.width = scaledSize.height * scaleFactor
+  }
+		
+  UIGraphicsBeginImageContext(scaledSize)
+  image.drawInRect(CGRectMake(0, 0, scaledSize.width, scaledSize.height))
+  let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+  UIGraphicsEndImageContext()
+		
+  return scaledImage
 	}
 	
 	/**
