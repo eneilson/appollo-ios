@@ -84,6 +84,9 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         let selectedIndex = Int(self.viewControllers!.count/2)
         self.selectedIndex = selectedIndex
         self.selectedViewController = (self.viewControllers as [AnyObject]?)?[selectedIndex] as? UIViewController
+        
+        (self.selectedViewController as! ScannerViewController).startScan()
+        
         dispatch_async(dispatch_get_main_queue(), {
             
             if self.isHighLighted == false{

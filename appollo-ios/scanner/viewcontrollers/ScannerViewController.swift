@@ -14,6 +14,8 @@ class ScannerViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.registerForNotification()
 
         // Do any additional setup after loading the view.
 //		let barCodeScanner = (self.storyboard?.instantiateViewControllerWithIdentifier("ScannerBarCodeViewController")) as! ScannerBarCodeViewController
@@ -31,17 +33,34 @@ class ScannerViewController: UIViewController {
 //		}
 //		
 //		self.presentViewController(barCodeScanner, animated: true, completion: nil)
-        
+    }
+
+    func startScan() {
         let barCodeScanner = (self.storyboard?.instantiateViewControllerWithIdentifier("ScannerPriceTagViewController")) as! ScannerPriceTagViewController
         self.presentViewController(barCodeScanner, animated: true, completion: nil)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    func registerForNotification() {
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didReadPriceLabel:", name: kDidReadPriceLabelNotification, object: nil)
+        
+    }
+    
+    func didReadPriceLabel(notification: NSNotification) {
+        let price = notification.userInfo!["price"] as! Double
+        
+        barCodeView.text = "\(price)"
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
     /*
     // MARK: - Navigation
 

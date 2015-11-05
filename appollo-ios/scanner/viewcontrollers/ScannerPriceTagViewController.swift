@@ -39,41 +39,23 @@ public class ScannerPriceTagViewController: UIViewController {
 	
 	// Tesseract OCR
 	var tesseract: G8Tesseract = G8Tesseract(language: "eng")
-	
-	/**
-	Initializer that will initialize the video camera forced to portait mode
-	
-	:param: aDecoder the NSCOder
-	
-	:returns: instance of this controller
-	*/
+    
+    var lastReadPrice: NSNumber?
+    
 	public required init?(coder aDecoder: NSCoder) {
 		videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSessionPreset1920x1080, cameraPosition: .Back)
 		videoCamera.outputImageOrientation = .Portrait;
 		super.init(coder: aDecoder)
 	}
 	
-	/**
-	Rotation is not needded.
-	
-	:returns: Returns .Portrait
-	*/
 	public override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
 		return UIInterfaceOrientationMask.Portrait
 	}
 	
-	/**
-	Hide the status bar during scan
-	
-	:returns: true to indicate the statusbar should be hidden
-	*/
 	public override func prefersStatusBarHidden() -> Bool {
 		return true
 	}
 	
-	/**
-	Initialize all graphic filters in the viewDidLoad
-	*/
 	public override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -113,20 +95,15 @@ public class ScannerPriceTagViewController: UIViewController {
 		// adaptiveTreshold.addTarget(self.filterView)
 		
 		// Adding these 2 extra filters to automatically control exposure depending of the average color in the scan area
-		contrast.addTarget(crop)
-		crop.addTarget(averageColor)
+		contrast.addTarget(averageColor)
+		//crop.addTarget(averageColor)
 		
 		self.view.backgroundColor = UIColor.whiteColor()
         
-        self.StartScan(self)
+        startScan()
 	}
 	
-	/**
-	call this from your code to start a scan immediately or hook it to a button.
-	
-	:param: sender The sender of this event
-	*/
-	@IBAction public func StartScan(sender: AnyObject) {
+	public func startScan() {
 		self.view.backgroundColor = UIColor.blackColor()
 		
 		self.videoCamera.startCameraCapture()
@@ -144,6 +121,7 @@ public class ScannerPriceTagViewController: UIViewController {
 		timer?.invalidate()
 		timer = nil
 		abbortScan()
+        self.dismissViewControllerAnimated(true, completion: nil)
 	}
 	
 	/**
@@ -162,7 +140,7 @@ public class ScannerPriceTagViewController: UIViewController {
 			let snapshot = currentFilterConfiguration.imageFromCurrentFramebuffer()
 			if snapshot == nil {
 				print("- Could not get snapshot from camera")
-				self.StartScan(self)
+				self.startScan()
 				return
 			}
 			
@@ -172,13 +150,13 @@ public class ScannerPriceTagViewController: UIViewController {
 			
 			autoreleasepool {
 				// Crop scan area
-//				let cropRect:CGRect! = CGRect(x: 350,y: 110,width: 350, height: 1700)
-//				let imageRef:CGImageRef! = CGImageCreateWithImageInRect(snapshot.CGImage, cropRect);
-                let imageRef = snapshot.CGImage!
+				let cropRect:CGRect! = CGRect(x: 350,y: 250,width: 350, height: 1700)
+				let imageRef:CGImageRef! = CGImageCreateWithImageInRect(snapshot.CGImage, cropRect);
+//                let imageRef = snapshot.CGImage!
 				//let croppedImage:UIImage = UIImage(CGImage: imageRef)
 				
 				// Four times faster scan speed when the image is smaller. Another bennefit is that the OCR results are better at this resolution
-				let croppedImage:UIImage =   UIImage(CGImage: imageRef).resizedImageToFitInSize(CGSize(width: 350 * 0.5 , height: 1700 * 0.5 ), scaleIfSmaller: true)
+				let croppedImage:UIImage =   UIImage(CGImage: imageRef).resizedImageToFitInSize(CGSize(width: 350 * 0.5 , height: 1200 ), scaleIfSmaller: true)
 				
 				
 				// Rotate cropped image
@@ -213,20 +191,41 @@ public class ScannerPriceTagViewController: UIViewController {
 				G8Tesseract.clearCache()
 			}
 			
-			print("Scanresult : \(result)")
-			
 			// Perform OCR
 			if let r = result {
 				
-				if r == "" || !r.isNumeric() {
-					print("Scan quality insufficient : \(r)")
-				} else {
-					self.videoCamera.stopCameraCapture()
-					self.succesfullScan(r)
-					return
+                let str = r.stringByRemovingAllWhitespaces()
+                
+                let formatter = NSNumberFormatter()
+                formatter.numberStyle = .CurrencyStyle
+                
+                if str.contains(".") {
+                    formatter.decimalSeparator = "."
+                } else {
+                    formatter.decimalSeparator = ","
+                }
+                
+				if let price = formatter.numberFromString(str) {
+                    
+                    if let lastPrice = self.lastReadPrice {
+                        if price == lastPrice {
+                            // 2x o mesmo preco portanto assume esse como o correto
+                            self.videoCamera.stopCameraCapture()
+                            self.succesfullScan(r)
+                            
+                            // dismiss
+                            
+                            // notifca o controller pai que leu o preco e qual o preco lido
+                            NSNotificationCenter.defaultCenter().postNotificationName(kDidReadPriceLabelNotification, object: self, userInfo: [price: price])
+                            self.dismissViewControllerAnimated(true, completion: nil)
+                            
+                            return
+                        }
+                    }
+					self.lastReadPrice = price
 				}
 			}
-			self.StartScan(self)
+			self.startScan()
 			
 		}
 	}

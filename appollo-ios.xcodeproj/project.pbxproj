@@ -29,6 +29,7 @@
 		0B81B2B61BE26D0B001894EB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B81B2B51BE26D0B001894EB /* AVFoundation.framework */; };
 		0B81B2B81BE26D14001894EB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B81B2B71BE26D14001894EB /* QuartzCore.framework */; };
 		0BDAB4CE1BD6955800915058 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDAB4CD1BD6955800915058 /* libz.tbd */; };
+		0BF5F5AF1BEADD9F000D324A /* String+Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF5F5AE1BEADD9F000D324A /* String+Trim.swift */; };
 		3F53DB6D1BD5261400EEFF85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F53DB6B1BD5261400EEFF85 /* Main.storyboard */; };
 		3F53DB701BD5261400EEFF85 /* appollo_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DB6E1BD5261400EEFF85 /* appollo_ios.xcdatamodeld */; };
 		3F53DB721BD5261400EEFF85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F53DB711BD5261400EEFF85 /* Assets.xcassets */; };
@@ -163,6 +164,7 @@
 		0B81B2B51BE26D0B001894EB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0B81B2B71BE26D14001894EB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0BDAB4CD1BD6955800915058 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		0BF5F5AE1BEADD9F000D324A /* String+Trim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Trim.swift"; path = "Classes/extensions/String+Trim.swift"; sourceTree = "<group>"; };
 		3F53DB641BD5261400EEFF85 /* appollo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "appollo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F53DB6C1BD5261400EEFF85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F53DB6F1BD5261400EEFF85 /* appollo_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = appollo_ios.xcdatamodel; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				0B62EC971BE0714300481FD7 /* UIColor+Hex.swift */,
 				0B62ECAA1BE0883800481FD7 /* UIController+OrientationSupport.swift */,
 				3F8974111BE2531500E5A1D4 /* UIImage+Resize.swift */,
+				0BF5F5AE1BEADD9F000D324A /* String+Trim.swift */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -710,6 +713,7 @@
 				0B62EC7B1BE05F2000481FD7 /* ShoppingCartTableViewCell.swift in Sources */,
 				3F8974081BE2497300E5A1D4 /* RSITFGenerator.swift in Sources */,
 				3F8974001BE2497300E5A1D4 /* RSCodeGenerator.swift in Sources */,
+				0BF5F5AF1BEADD9F000D324A /* String+Trim.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
